@@ -22,9 +22,12 @@ Demo that uses WebRTC for video calls, based on Firebase signaling.
 
 Functionality description: 
 - Create room by entering ID and pressing "create"
-- Provide you ID to callee and make enter ID him press "join"
+- Provide you ID to callee and make him enter ID and press "join"
 - Enjoy video call 
-- P.S. Currently it is mocked by simple cat.mp4 video, because of simulator restrictions, but just change the way you capturing video from local file to camera to make it work. 
+- P.S. Currently it is mocked by simple cat.mp4 video, because of simulator restrictions. So, change the way you capturing video from local file to camera. 
+
+You can use WebRTCClient and SignalingClient classes to make your own video call project, just create your own Firebase project and put GoogleService-Info.plist file into it.
+Don't forget to call FirebaseApp.configure() in AppDelegate
 
 
 ## Contacts
