@@ -73,13 +73,6 @@ final class SignalingClient {
     private func createOffer(desc: SessionDescription?, id: String) -> SafeSignal<Void> {
         return Signal { observer in
             let offer = desc.asDictionary()
-//            print("offer2 ", offer2)
-//            let offer = [
-//                "type": desc?.type.rawValue,
-//                "sdp":  desc?.rtcSessionDescription.sdp
-//                ] as [String : Any]
-//            print("offer ", offer)
-
             
             Firestore.firestore()
                 .collection("rooms")
