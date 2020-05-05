@@ -1,6 +1,7 @@
 # Walkie-Talkie
 
 Video Calls Application using WebRTC and Firebase
+
 Demo that uses WebRTC for video calls, based on Firebase signaling. 
 
 <p align="center">
