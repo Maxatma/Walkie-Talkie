@@ -115,3 +115,39 @@ extension BondViewProtocol where Self: UIView {
     }
 }
 
+class BondButton: UIButton, BondViewProtocol {
+    var _viewModel: BondVMProtocol?
+    
+    var viewModel: BondVMProtocol? {
+        get {
+            return _viewModel
+        }
+        set(newViewModel) {
+            if _viewModel !== newViewModel {
+                unadvise()
+                _viewModel = newViewModel
+                if _viewModel != nil {
+                    advise()
+                }
+            }
+        }
+    }
+    
+    deinit {
+        viewModel = nil
+    }
+    
+    // called to dispose binds needed for view
+    
+    func unadvise() {
+        bag.dispose()
+        let views = subviews.compactMap { $0 as? BondView }
+        for view in views {
+            view.viewModel = nil
+        }
+    }
+    
+    // called to bind needed for view
+    
+    func advise() {}
+}

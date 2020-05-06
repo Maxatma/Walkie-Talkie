@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="JoinView" customModule="Walkie_Talkie" customModuleProvider="target">
+            <connections>
+                <outlet property="create" destination="2Ay-hK-vBw" id="sn9-OD-WRt"/>
+                <outlet property="join" destination="fqU-8V-YJw" id="O8P-eE-Pxs"/>
+                <outlet property="roomID" destination="LpX-HQ-Oy0" id="O4D-lf-O6D"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="413" height="92"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="6Ai-8Q-CCg">
+                    <rect key="frame" x="0.0" y="0.0" width="413" height="40"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fqU-8V-YJw">
+                            <rect key="frame" x="0.0" y="0.0" width="201.5" height="40"/>
+                            <color key="backgroundColor" red="0.3803921569" green="0.31764705879999999" blue="0.57254901960000004" alpha="1" colorSpace="calibratedRGB"/>
+                            <state key="normal" title="JOIN ROOM">
+                                <color key="titleColor" red="0.53333333329999999" green="0.48627450979999998" blue="0.68627450980000004" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Ay-hK-vBw">
+                            <rect key="frame" x="211.5" y="0.0" width="201.5" height="40"/>
+                            <color key="backgroundColor" red="0.3803921569" green="0.31764705879999999" blue="0.57254901960000004" alpha="1" colorSpace="calibratedRGB"/>
+                            <state key="normal" title="CREATE ROOM">
+                                <color key="titleColor" red="0.53333333329999999" green="0.48627450979999998" blue="0.68627450980000004" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="3bP-pe-qU7"/>
+                    </constraints>
+                </stackView>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Enter room ID " textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LpX-HQ-Oy0">
+                    <rect key="frame" x="0.0" y="48" width="413" height="44"/>
+                    <color key="backgroundColor" red="0.94509803920000002" green="0.95294117649999999" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="LpX-HQ-Oy0" firstAttribute="top" secondItem="6Ai-8Q-CCg" secondAttribute="bottom" constant="8" id="1lV-KV-Jvb"/>
+                <constraint firstItem="LpX-HQ-Oy0" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="5Jb-lu-9mU"/>
+                <constraint firstItem="6Ai-8Q-CCg" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="FBF-Uz-EHx"/>
+                <constraint firstAttribute="trailing" secondItem="LpX-HQ-Oy0" secondAttribute="trailing" id="QWN-ma-IEk"/>
+                <constraint firstAttribute="trailing" secondItem="6Ai-8Q-CCg" secondAttribute="trailing" id="VHM-g6-YAI"/>
+                <constraint firstAttribute="bottom" secondItem="LpX-HQ-Oy0" secondAttribute="bottom" id="exP-d3-Jxh"/>
+                <constraint firstItem="6Ai-8Q-CCg" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="tYa-gJ-xNi"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="131.15942028985509" y="-116.51785714285714"/>
+        </view>
+    </objects>
+</document>

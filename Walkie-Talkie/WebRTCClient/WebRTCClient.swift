@@ -117,7 +117,7 @@ final class WebRTCClient: NSObject {
             print("WebRTCService can't get capturer")
             return
         }
-
+        
         guard
             let frontCamera = (RTCCameraVideoCapturer.captureDevices().first { $0.position == .front }),
             // choose highest res
@@ -162,9 +162,9 @@ final class WebRTCClient: NSObject {
     func renderRemoteVideo(to renderer: RTCVideoRenderer) {
         remoteVideoTrack?.add(renderer)
     }
-
+    
     //MARK: - Private
-
+    
     private func configureAudioSession() {
         rtcAudioSession.lockForConfiguration()
         do {
@@ -226,7 +226,7 @@ final class WebRTCClient: NSObject {
         let buffer = RTCDataBuffer(data: data, isBinary: true)
         remoteDataChannel?.sendData(buffer)
     }
-
+    
     //MARK: - Private
     
     private func createDataChannel() -> RTCDataChannel? {
@@ -236,6 +236,21 @@ final class WebRTCClient: NSObject {
             return nil
         }
         return dataChannel
+    }
+    
+    //MARK: - Private
+    
+    private func setVideoEnabled(_ isEnabled: Bool) {
+        let audioTracks = peerConnection.transceivers.compactMap { return $0.sender.track as? RTCVideoTrack }
+        audioTracks.forEach { $0.isEnabled = isEnabled }
+    }
+    
+    public func offVideo() {
+        setVideoEnabled(false)
+    }
+    
+    public func onVideo() {
+        setVideoEnabled(true)
     }
 }
 

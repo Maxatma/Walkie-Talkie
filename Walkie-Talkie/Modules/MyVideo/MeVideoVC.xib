@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MeVideoVC" customModule="Walkie_Talkie" customModuleProvider="target">
+            <connections>
+                <outlet property="video" destination="1Og-H0-Vj7" id="Qqc-IH-FNL"/>
+                <outlet property="view" destination="iN0-l3-epB" id="cgj-Rd-vcK"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="1Og-H0-Vj7" customClass="VideoView" customModule="Walkie_Talkie" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="1Og-H0-Vj7" secondAttribute="trailing" id="0yu-j5-cjV"/>
+                <constraint firstItem="1Og-H0-Vj7" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="89M-20-35k"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="1Og-H0-Vj7" secondAttribute="bottom" id="lSw-XY-hbP"/>
+                <constraint firstItem="1Og-H0-Vj7" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="pCv-cw-RtM"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="132" y="153"/>
+        </view>
+    </objects>
+</document>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="SettingsView" customModule="Walkie_Talkie" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="367" height="93"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="rO5-a6-Vr2">
+                    <rect key="frame" x="0.0" y="0.0" width="367" height="93"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ah2-OT-hEc" customClass="OnOffButton" customModule="Walkie_Talkie" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="92" height="93"/>
+                            <state key="normal" image="micOn"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mEV-p3-Iwl" customClass="OnOffButton" customModule="Walkie_Talkie" customModuleProvider="target">
+                            <rect key="frame" x="92" y="0.0" width="91.5" height="93"/>
+                            <state key="normal" image="soundOn"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l8h-qQ-VUd" customClass="OnOffButton" customModule="Walkie_Talkie" customModuleProvider="target">
+                            <rect key="frame" x="183.5" y="0.0" width="92" height="93"/>
+                            <state key="normal" image="cameraOn"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uk5-94-2kL">
+                            <rect key="frame" x="275.5" y="0.0" width="91.5" height="93"/>
+                            <state key="normal" image="hangup"/>
+                        </button>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="rO5-a6-Vr2" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Dtz-YM-XNU"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="rO5-a6-Vr2" secondAttribute="trailing" id="TE8-Pl-yCD"/>
+                <constraint firstItem="rO5-a6-Vr2" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="iYh-ug-HRy"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="rO5-a6-Vr2" secondAttribute="bottom" id="phL-eX-TAU"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="97.826086956521749" y="-116.18303571428571"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="cameraOn" width="21.333333969116211" height="21.333333969116211"/>
+        <image name="hangup" width="21.333333969116211" height="21.333333969116211"/>
+        <image name="micOn" width="21.333333969116211" height="21.333333969116211"/>
+        <image name="soundOn" width="21.333333969116211" height="21.333333969116211"/>
+    </resources>
+</document>

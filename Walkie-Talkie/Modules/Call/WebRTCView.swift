@@ -11,7 +11,7 @@ import WebRTC
 
 
 final class WebRTCView: UIView, RTCVideoViewDelegate {
-    let videoView = RTCEAGLVideoView(frame: .zero)
+    let videoView = VideoView(frame: .zero)
     var videoSize = CGSize.zero
     
     override init(frame: CGRect) {
@@ -33,16 +33,16 @@ final class WebRTCView: UIView, RTCVideoViewDelegate {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        guard videoSize.width > 0 && videoSize.height > 0 else {
-            videoView.frame = bounds
-            return
+        
+        guard
+            videoSize.width > 0 && videoSize.height > 0
+            else {
+                videoView.frame = bounds
+                return
         }
         
         var videoFrame = AVMakeRect(aspectRatio: videoSize, insideRect: bounds)
-        let scale = videoFrame.size.aspectFitScale(in: bounds.size)
-        videoFrame.size.width = videoFrame.size.width * CGFloat(scale)
-        videoFrame.size.height = videoFrame.size.height * CGFloat(scale)
-        
+        videoFrame.size.aspectFitSize(in: bounds.size)
         videoView.frame = videoFrame
         videoView.center = CGPoint(x: bounds.midX, y: bounds.midY)
     }
@@ -50,6 +50,13 @@ final class WebRTCView: UIView, RTCVideoViewDelegate {
 
 
 extension CGSize {
+    
+    mutating func aspectFitSize(in container: CGSize) {
+        let scale = aspectFitScale(in: container)
+        width = width * CGFloat(scale)
+        height = height * CGFloat(scale)
+    }
+    
     func aspectFitScale(in container: CGSize) -> CGFloat {
         
         if height <= container.height && width > container.width {
@@ -67,3 +74,4 @@ extension CGSize {
         return 1.0
     }
 }
+

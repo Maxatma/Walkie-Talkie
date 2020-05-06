@@ -11,32 +11,28 @@ import WebRTC
 
 
 final class CallVC: BondVC {
-    
     var vm: CallVM {
         return viewModel as! CallVM
     }
-
-    @IBOutlet var me: RTCEAGLVideoView!
+    
     @IBOutlet var caller: WebRTCView!
-    @IBOutlet var create: UIButton!
-    @IBOutlet var join: UIButton!
-    @IBOutlet var roomID: UITextField!
-
+    @IBOutlet var join: JoinView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationController?.navigationBar.isHidden = true
-        advise()
+        navigationController?.navigationBar.isHidden = true
         hideKeyboardWhenTappedAround()
-        vm.webRTCClient.startCaptureLocalVideoFile(name: "cat.mp4", renderer: me)
-        vm.webRTCClient.renderRemoteVideo(to: caller.videoView)
+        advise()
     }
-
+    
     override func advise() {
         super.advise()
-        create.reactive.tap.bind(to: vm.create).dispose(in: bag)
-        join.reactive.tap.bind(to: vm.join).dispose(in: bag)
-        roomID.reactive.text.ignoreNil().bind(to: vm.roomID).dispose(in: bag)
-        vm.roomID.bind(to: roomID.reactive.text).dispose(in: bag)
+        caller.videoView.vm = vm.videoVM
+        join.viewModel = vm.joinVM
+        
+        //        vm.webRTCClient.startCaptureLocalVideoFile(name: "cat.mp4", renderer: me)
+        //        vm.webRTCClient.renderRemoteVideo(to: caller.videoView)
+        
     }
 }
 

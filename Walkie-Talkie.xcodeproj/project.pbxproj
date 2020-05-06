@@ -15,6 +15,9 @@
 		DD1C075124372FBB000C6972 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD1C075024372FBB000C6972 /* Assets.xcassets */; };
 		DD1C075424372FBB000C6972 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD1C075224372FBB000C6972 /* LaunchScreen.storyboard */; };
 		DD1C075C24372FDB000C6972 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DD1C075B24372FDB000C6972 /* GoogleService-Info.plist */; };
+		DD1D1D9E2461CBB600FD122A /* SettingsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD1D1D9D2461CBB600FD122A /* SettingsView.xib */; };
+		DD1D1DA02461CBC700FD122A /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD1D1D9F2461CBC700FD122A /* SettingsView.swift */; };
+		DD1D1DA22461CBCC00FD122A /* SettingsVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD1D1DA12461CBCC00FD122A /* SettingsVM.swift */; };
 		DD316C17245611EA00420D11 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD316C16245611EA00420D11 /* Config.swift */; };
 		DD3E108124540E9300B900C7 /* CallVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3E108024540E9300B900C7 /* CallVM.swift */; };
 		DD3E1083245411F100B900C7 /* CallVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD3E1082245411F100B900C7 /* CallVC.xib */; };
@@ -28,6 +31,11 @@
 		DD4A3B3D2455927C00871A0B /* IceCandidate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4A3B3A2455927C00871A0B /* IceCandidate.swift */; };
 		DD50EA5B2458082500B83F36 /* cat.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = DDCAB543245802A70099ADD9 /* cat.mp4 */; };
 		DD57B847245EE9E900B84F8A /* SdpType.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD57B846245EE9E900B84F8A /* SdpType.swift */; };
+		DD6F70842462EE1100FCBCEA /* JoinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6F70832462EE1100FCBCEA /* JoinView.swift */; };
+		DD6F70862462EE1700FCBCEA /* JoinVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6F70852462EE1700FCBCEA /* JoinVM.swift */; };
+		DD6F70882462EE2200FCBCEA /* JoinView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD6F70872462EE2200FCBCEA /* JoinView.xib */; };
+		DD6F708C2462F5F800FCBCEA /* VideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6F708B2462F5F800FCBCEA /* VideoView.swift */; };
+		DD6F708E246309EF00FCBCEA /* VideoVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6F708D246309EF00FCBCEA /* VideoVM.swift */; };
 		DD7B68F9245818F400BAB913 /* WebRTCService+RTCDataChannelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7B68F8245818F400BAB913 /* WebRTCService+RTCDataChannelDelegate.swift */; };
 		DD7B68FB2458192000BAB913 /* WebRTCService+RTCPeerConnectionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7B68FA2458192000BAB913 /* WebRTCService+RTCPeerConnectionDelegate.swift */; };
 		DD7B68FD2458194500BAB913 /* AudioClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7B68FC2458194500BAB913 /* AudioClient.swift */; };
@@ -52,12 +60,9 @@
 		DDA9CE80243A40C9008F5BFE /* UIStoryboard+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA9CE6D243A40C8008F5BFE /* UIStoryboard+Extensions.swift */; };
 		DDA9CE82243A437A008F5BFE /* BaseServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA9CE81243A437A008F5BFE /* BaseServiceError.swift */; };
 		DDC0D581245F56B00051BA5E /* WebRTCView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC0D580245F56B00051BA5E /* WebRTCView.swift */; };
-		DDCBB9CC243A275F006DE46B /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDCBB9CB243A275F006DE46B /* LoginVC.swift */; };
-		DDCBB9CE243A2766006DE46B /* LoginVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDCBB9CD243A2766006DE46B /* LoginVM.swift */; };
-		DDCBB9D1243A28F9006DE46B /* LoginVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = DDCBB9D0243A28F9006DE46B /* LoginVC.xib */; };
-		DDCBB9D4243A3263006DE46B /* SignupVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = DDCBB9D3243A3263006DE46B /* SignupVC.xib */; };
-		DDCBB9D6243A326C006DE46B /* SignupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDCBB9D5243A326C006DE46B /* SignupVC.swift */; };
-		DDCBB9D8243A3271006DE46B /* SignupVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDCBB9D7243A3271006DE46B /* SignupVM.swift */; };
+		DDED86902461B662004A0FA5 /* MeVideoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDED868F2461B662004A0FA5 /* MeVideoVC.swift */; };
+		DDED86922461B6FE004A0FA5 /* MeVideoVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDED86912461B6FE004A0FA5 /* MeVideoVM.swift */; };
+		DDED86942461B705004A0FA5 /* MeVideoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = DDED86932461B705004A0FA5 /* MeVideoVC.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -88,6 +93,9 @@
 		DD1C075324372FBB000C6972 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DD1C075524372FBB000C6972 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DD1C075B24372FDB000C6972 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		DD1D1D9D2461CBB600FD122A /* SettingsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsView.xib; sourceTree = "<group>"; };
+		DD1D1D9F2461CBC700FD122A /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		DD1D1DA12461CBCC00FD122A /* SettingsVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVM.swift; sourceTree = "<group>"; };
 		DD316C16245611EA00420D11 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		DD3E108024540E9300B900C7 /* CallVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallVM.swift; sourceTree = "<group>"; };
 		DD3E1082245411F100B900C7 /* CallVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CallVC.xib; sourceTree = "<group>"; };
@@ -100,6 +108,11 @@
 		DD4A3B392455927C00871A0B /* SessionDescription.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionDescription.swift; sourceTree = "<group>"; };
 		DD4A3B3A2455927C00871A0B /* IceCandidate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IceCandidate.swift; sourceTree = "<group>"; };
 		DD57B846245EE9E900B84F8A /* SdpType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SdpType.swift; sourceTree = "<group>"; };
+		DD6F70832462EE1100FCBCEA /* JoinView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinView.swift; sourceTree = "<group>"; };
+		DD6F70852462EE1700FCBCEA /* JoinVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinVM.swift; sourceTree = "<group>"; };
+		DD6F70872462EE2200FCBCEA /* JoinView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JoinView.xib; sourceTree = "<group>"; };
+		DD6F708B2462F5F800FCBCEA /* VideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoView.swift; sourceTree = "<group>"; };
+		DD6F708D246309EF00FCBCEA /* VideoVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoVM.swift; sourceTree = "<group>"; };
 		DD7B68F8245818F400BAB913 /* WebRTCService+RTCDataChannelDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WebRTCService+RTCDataChannelDelegate.swift"; sourceTree = "<group>"; };
 		DD7B68FA2458192000BAB913 /* WebRTCService+RTCPeerConnectionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WebRTCService+RTCPeerConnectionDelegate.swift"; sourceTree = "<group>"; };
 		DD7B68FC2458194500BAB913 /* AudioClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioClient.swift; sourceTree = "<group>"; };
@@ -125,12 +138,9 @@
 		DDA9CE81243A437A008F5BFE /* BaseServiceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseServiceError.swift; sourceTree = "<group>"; };
 		DDC0D580245F56B00051BA5E /* WebRTCView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebRTCView.swift; sourceTree = "<group>"; };
 		DDCAB543245802A70099ADD9 /* cat.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = cat.mp4; sourceTree = "<group>"; };
-		DDCBB9CB243A275F006DE46B /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
-		DDCBB9CD243A2766006DE46B /* LoginVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVM.swift; sourceTree = "<group>"; };
-		DDCBB9D0243A28F9006DE46B /* LoginVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginVC.xib; sourceTree = "<group>"; };
-		DDCBB9D3243A3263006DE46B /* SignupVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignupVC.xib; sourceTree = "<group>"; };
-		DDCBB9D5243A326C006DE46B /* SignupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupVC.swift; sourceTree = "<group>"; };
-		DDCBB9D7243A3271006DE46B /* SignupVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupVM.swift; sourceTree = "<group>"; };
+		DDED868F2461B662004A0FA5 /* MeVideoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeVideoVC.swift; sourceTree = "<group>"; };
+		DDED86912461B6FE004A0FA5 /* MeVideoVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeVideoVM.swift; sourceTree = "<group>"; };
+		DDED86932461B705004A0FA5 /* MeVideoVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MeVideoVC.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -201,8 +211,8 @@
 			children = (
 				DD3E108024540E9300B900C7 /* CallVM.swift */,
 				DD1C074B24372FB9000C6972 /* CallVC.swift */,
-				DDC0D580245F56B00051BA5E /* WebRTCView.swift */,
 				DD3E1082245411F100B900C7 /* CallVC.xib */,
+				DDC0D580245F56B00051BA5E /* WebRTCView.swift */,
 			);
 			path = Call;
 			sourceTree = "<group>";
@@ -236,6 +246,35 @@
 				DD4A3B3A2455927C00871A0B /* IceCandidate.swift */,
 			);
 			path = Codables;
+			sourceTree = "<group>";
+		};
+		DD6F70892462EE2600FCBCEA /* JoinView */ = {
+			isa = PBXGroup;
+			children = (
+				DD6F70852462EE1700FCBCEA /* JoinVM.swift */,
+				DD6F70832462EE1100FCBCEA /* JoinView.swift */,
+				DD6F70872462EE2200FCBCEA /* JoinView.xib */,
+			);
+			path = JoinView;
+			sourceTree = "<group>";
+		};
+		DD6F708A2462EE2F00FCBCEA /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				DD1D1DA12461CBCC00FD122A /* SettingsVM.swift */,
+				DD1D1D9F2461CBC700FD122A /* SettingsView.swift */,
+				DD1D1D9D2461CBB600FD122A /* SettingsView.xib */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		DD6F708F24630C4E00FCBCEA /* VideoView */ = {
+			isa = PBXGroup;
+			children = (
+				DD6F708B2462F5F800FCBCEA /* VideoView.swift */,
+				DD6F708D246309EF00FCBCEA /* VideoVM.swift */,
+			);
+			path = VideoView;
 			sourceTree = "<group>";
 		};
 		DD7B68F62458183100BAB913 /* WebRTCClient */ = {
@@ -321,34 +360,26 @@
 			name = "Recovered References";
 			sourceTree = "<group>";
 		};
-		DDCBB9CF243A286B006DE46B /* Login */ = {
-			isa = PBXGroup;
-			children = (
-				DDCBB9D0243A28F9006DE46B /* LoginVC.xib */,
-				DDCBB9CB243A275F006DE46B /* LoginVC.swift */,
-				DDCBB9CD243A2766006DE46B /* LoginVM.swift */,
-			);
-			path = Login;
-			sourceTree = "<group>";
-		};
 		DDCBB9D2243A28FF006DE46B /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				DD6F708F24630C4E00FCBCEA /* VideoView */,
+				DDED86952461B717004A0FA5 /* MyVideo */,
 				DD4A3B27245589CE00871A0B /* Call */,
-				DDCBB9D9243A32A8006DE46B /* Signup */,
-				DDCBB9CF243A286B006DE46B /* Login */,
+				DD6F708A2462EE2F00FCBCEA /* Settings */,
+				DD6F70892462EE2600FCBCEA /* JoinView */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
 		};
-		DDCBB9D9243A32A8006DE46B /* Signup */ = {
+		DDED86952461B717004A0FA5 /* MyVideo */ = {
 			isa = PBXGroup;
 			children = (
-				DDCBB9D3243A3263006DE46B /* SignupVC.xib */,
-				DDCBB9D5243A326C006DE46B /* SignupVC.swift */,
-				DDCBB9D7243A3271006DE46B /* SignupVM.swift */,
+				DDED86912461B6FE004A0FA5 /* MeVideoVM.swift */,
+				DDED868F2461B662004A0FA5 /* MeVideoVC.swift */,
+				DDED86932461B705004A0FA5 /* MeVideoVC.xib */,
 			);
-			path = Signup;
+			path = MyVideo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -412,13 +443,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD6F70882462EE2200FCBCEA /* JoinView.xib in Resources */,
 				DD50EA5B2458082500B83F36 /* cat.mp4 in Resources */,
-				DDCBB9D1243A28F9006DE46B /* LoginVC.xib in Resources */,
 				DD1C075424372FBB000C6972 /* LaunchScreen.storyboard in Resources */,
+				DDED86942461B705004A0FA5 /* MeVideoVC.xib in Resources */,
 				DD1C075C24372FDB000C6972 /* GoogleService-Info.plist in Resources */,
+				DD1D1D9E2461CBB600FD122A /* SettingsView.xib in Resources */,
 				DD1C075124372FBB000C6972 /* Assets.xcassets in Resources */,
 				DD3E1083245411F100B900C7 /* CallVC.xib in Resources */,
-				DDCBB9D4243A3263006DE46B /* SignupVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -471,18 +503,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD6F708E246309EF00FCBCEA /* VideoVM.swift in Sources */,
 				DDA9CE71243A40C9008F5BFE /* UIPageViewController+Bond.swift in Sources */,
 				DDA9CE73243A40C9008F5BFE /* UIDocumentPickerViewController+Bond.swift in Sources */,
 				DD3E108124540E9300B900C7 /* CallVM.swift in Sources */,
 				DDA9CE70243A40C9008F5BFE /* UIScrollView+Bond.swift in Sources */,
-				DDCBB9D8243A3271006DE46B /* SignupVM.swift in Sources */,
-				DDCBB9D6243A326C006DE46B /* SignupVC.swift in Sources */,
 				DDA9CE6E243A40C9008F5BFE /* UIApplication+Extension.swift in Sources */,
+				DD1D1DA02461CBC700FD122A /* SettingsView.swift in Sources */,
 				DDC0D581245F56B00051BA5E /* WebRTCView.swift in Sources */,
 				DD4A3B3424558DDA00871A0B /* WebRTCClientDelegate.swift in Sources */,
 				DDA9CE7B243A40C9008F5BFE /* BondTableView.swift in Sources */,
 				DD7B68FD2458194500BAB913 /* AudioClient.swift in Sources */,
 				DD1C074C24372FB9000C6972 /* CallVC.swift in Sources */,
+				DD1D1DA22461CBCC00FD122A /* SettingsVM.swift in Sources */,
 				DDA9CE7E243A40C9008F5BFE /* UITableView+Bond.swift in Sources */,
 				DD1C074824372FB9000C6972 /* AppDelegate.swift in Sources */,
 				DD4A3B3B2455927C00871A0B /* RTCStates.swift in Sources */,
@@ -494,18 +527,21 @@
 				DD4A3B3524558DDA00871A0B /* SignalingClient.swift in Sources */,
 				DDA9CE74243A40C9008F5BFE /* SelectableTableCell.swift in Sources */,
 				DDA9CE82243A437A008F5BFE /* BaseServiceError.swift in Sources */,
+				DDED86902461B662004A0FA5 /* MeVideoVC.swift in Sources */,
 				DD57B847245EE9E900B84F8A /* SdpType.swift in Sources */,
-				DDCBB9CC243A275F006DE46B /* LoginVC.swift in Sources */,
 				DD1C074A24372FB9000C6972 /* SceneDelegate.swift in Sources */,
+				DD6F708C2462F5F800FCBCEA /* VideoView.swift in Sources */,
+				DD6F70862462EE1700FCBCEA /* JoinVM.swift in Sources */,
 				DD316C17245611EA00420D11 /* Config.swift in Sources */,
 				DDA9CE76243A40C9008F5BFE /* BondViewModel.swift in Sources */,
 				DD4A3B2924558DC500871A0B /* WebRTCClient.swift in Sources */,
 				DDA9CE75243A40C9008F5BFE /* XibLoadedVC.swift in Sources */,
 				DD7B68FB2458192000BAB913 /* WebRTCService+RTCPeerConnectionDelegate.swift in Sources */,
 				DD4A3B3D2455927C00871A0B /* IceCandidate.swift in Sources */,
+				DD6F70842462EE1100FCBCEA /* JoinView.swift in Sources */,
+				DDED86922461B6FE004A0FA5 /* MeVideoVM.swift in Sources */,
 				DD3E1087245416C400B900C7 /* Router.swift in Sources */,
 				DD3E1085245415A600B900C7 /* UIViewController+HideKeyboard.swift in Sources */,
-				DDCBB9CE243A2766006DE46B /* LoginVM.swift in Sources */,
 				DDA9CE79243A40C9008F5BFE /* BackableVM.swift in Sources */,
 				DD4A3B3C2455927C00871A0B /* SessionDescription.swift in Sources */,
 				DDA9CE7D243A40C9008F5BFE /* UITextField+Bond.swift in Sources */,
