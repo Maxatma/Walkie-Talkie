@@ -9,8 +9,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CallVC" customModule="Walkie_Talkie" customModuleProvider="target">
             <connections>
-                <outlet property="caller" destination="Ob0-6m-RX1" id="VAD-8v-HA7"/>
-                <outlet property="join" destination="Vu5-Kf-WDg" id="mAt-2c-8sw"/>
+                <outlet property="caller" destination="Ob0-6m-RX1" id="x9h-ck-jo9"/>
+                <outlet property="settings" destination="RvB-FL-Csb" id="x4r-hW-mBV"/>
                 <outlet property="view" destination="iN0-l3-epB" id="D5F-D8-1Qp"/>
             </connections>
         </placeholder>
@@ -23,21 +23,21 @@
                     <rect key="frame" x="0.0" y="44" width="414" height="852"/>
                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vu5-Kf-WDg" customClass="JoinView" customModule="Walkie_Talkie" customModuleProvider="target">
-                    <rect key="frame" x="0.0" y="782" width="414" height="80"/>
-                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RvB-FL-Csb" customClass="SettingsView" customModule="Walkie_Talkie" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="818" width="414" height="44"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="80" id="ASH-G3-Vtx"/>
+                        <constraint firstAttribute="height" constant="44" id="hfZ-n5-3S1"/>
                     </constraints>
                 </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="Vu5-Kf-WDg" secondAttribute="bottom" id="30X-bL-8pm"/>
                 <constraint firstAttribute="trailing" secondItem="Ob0-6m-RX1" secondAttribute="trailing" id="C1Z-tI-EZU"/>
                 <constraint firstItem="Ob0-6m-RX1" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Qcv-ZQ-Rtt"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Vu5-Kf-WDg" secondAttribute="trailing" id="SCh-u3-7vd"/>
-                <constraint firstItem="Vu5-Kf-WDg" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Z4l-pb-se4"/>
+                <constraint firstItem="RvB-FL-Csb" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Ufo-Lk-jos"/>
+                <constraint firstItem="RvB-FL-Csb" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="aL7-4e-3Xs"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="RvB-FL-Csb" secondAttribute="bottom" id="nfT-Zd-NFj"/>
                 <constraint firstAttribute="bottom" secondItem="Ob0-6m-RX1" secondAttribute="bottom" id="qrg-Ds-l8O"/>
                 <constraint firstItem="Ob0-6m-RX1" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="zw5-fn-2yc"/>
             </constraints>

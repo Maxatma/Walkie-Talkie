@@ -8,6 +8,7 @@
 
 import UIKit
 import WebRTC
+import PIPKit
 
 
 final class CallVC: BondVC {
@@ -16,23 +17,24 @@ final class CallVC: BondVC {
     }
     
     @IBOutlet var caller: WebRTCView!
-    @IBOutlet var join: JoinView!
+    @IBOutlet var settings: SettingsView!
+    
+    private let pipVC = PIPVideoVC()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.navigationBar.isHidden = true
         hideKeyboardWhenTappedAround()
         advise()
+        
+        pipVC.viewModel = vm.meVideoVM
+        PIPKit.show(with: pipVC)
     }
     
     override func advise() {
         super.advise()
         caller.videoView.vm = vm.videoVM
-        join.viewModel = vm.joinVM
-        
-        //        vm.webRTCClient.startCaptureLocalVideoFile(name: "cat.mp4", renderer: me)
-        //        vm.webRTCClient.renderRemoteVideo(to: caller.videoView)
-        
+        settings.viewModel = vm.settingsVM
     }
 }
 

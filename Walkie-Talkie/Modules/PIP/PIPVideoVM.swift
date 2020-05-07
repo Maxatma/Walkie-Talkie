@@ -9,7 +9,7 @@
 import Foundation
 
 
-final class MeVideoVM: BondViewModel {
+final class PIPVideoVM: BondViewModel {
     var webRTCClient: WebRTCClient!
     var videoVM: VideoVM!
     

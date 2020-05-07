@@ -237,21 +237,6 @@ final class WebRTCClient: NSObject {
         }
         return dataChannel
     }
-    
-    //MARK: - Private
-    
-    private func setVideoEnabled(_ isEnabled: Bool) {
-        let audioTracks = peerConnection.transceivers.compactMap { return $0.sender.track as? RTCVideoTrack }
-        audioTracks.forEach { $0.isEnabled = isEnabled }
-    }
-    
-    public func offVideo() {
-        setVideoEnabled(false)
-    }
-    
-    public func onVideo() {
-        setVideoEnabled(true)
-    }
 }
 
 extension RTCMediaConstraints {

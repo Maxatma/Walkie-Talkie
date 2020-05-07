@@ -19,6 +19,9 @@
 		DD1D1DA02461CBC700FD122A /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD1D1D9F2461CBC700FD122A /* SettingsView.swift */; };
 		DD1D1DA22461CBCC00FD122A /* SettingsVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD1D1DA12461CBCC00FD122A /* SettingsVM.swift */; };
 		DD316C17245611EA00420D11 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD316C16245611EA00420D11 /* Config.swift */; };
+		DD3C34A724644D0500C244B4 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3C34A624644D0500C244B4 /* MainVC.swift */; };
+		DD3C34AA24644D1400C244B4 /* MainVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3C34A924644D1400C244B4 /* MainVM.swift */; };
+		DD3C34AC24644D1B00C244B4 /* MainVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD3C34AB24644D1B00C244B4 /* MainVC.xib */; };
 		DD3E108124540E9300B900C7 /* CallVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3E108024540E9300B900C7 /* CallVM.swift */; };
 		DD3E1083245411F100B900C7 /* CallVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD3E1082245411F100B900C7 /* CallVC.xib */; };
 		DD3E1085245415A600B900C7 /* UIViewController+HideKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3E1084245415A600B900C7 /* UIViewController+HideKeyboard.swift */; };
@@ -39,6 +42,7 @@
 		DD7B68F9245818F400BAB913 /* WebRTCService+RTCDataChannelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7B68F8245818F400BAB913 /* WebRTCService+RTCDataChannelDelegate.swift */; };
 		DD7B68FB2458192000BAB913 /* WebRTCService+RTCPeerConnectionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7B68FA2458192000BAB913 /* WebRTCService+RTCPeerConnectionDelegate.swift */; };
 		DD7B68FD2458194500BAB913 /* AudioClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7B68FC2458194500BAB913 /* AudioClient.swift */; };
+		DD91AA6A246448BD0031AEE1 /* VideoClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD91AA69246448BD0031AEE1 /* VideoClient.swift */; };
 		DDA9CE6E243A40C9008F5BFE /* UIApplication+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA9CE59243A40C8008F5BFE /* UIApplication+Extension.swift */; };
 		DDA9CE6F243A40C9008F5BFE /* RegisterNibsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA9CE5A243A40C8008F5BFE /* RegisterNibsExtension.swift */; };
 		DDA9CE70243A40C9008F5BFE /* UIScrollView+Bond.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA9CE5C243A40C8008F5BFE /* UIScrollView+Bond.swift */; };
@@ -60,9 +64,10 @@
 		DDA9CE80243A40C9008F5BFE /* UIStoryboard+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA9CE6D243A40C8008F5BFE /* UIStoryboard+Extensions.swift */; };
 		DDA9CE82243A437A008F5BFE /* BaseServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA9CE81243A437A008F5BFE /* BaseServiceError.swift */; };
 		DDC0D581245F56B00051BA5E /* WebRTCView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC0D580245F56B00051BA5E /* WebRTCView.swift */; };
-		DDED86902461B662004A0FA5 /* MeVideoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDED868F2461B662004A0FA5 /* MeVideoVC.swift */; };
-		DDED86922461B6FE004A0FA5 /* MeVideoVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDED86912461B6FE004A0FA5 /* MeVideoVM.swift */; };
-		DDED86942461B705004A0FA5 /* MeVideoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = DDED86932461B705004A0FA5 /* MeVideoVC.xib */; };
+		DDE36BE9246446EA00498795 /* Encodable+Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE36BE8246446EA00498795 /* Encodable+Dictionary.swift */; };
+		DDED86902461B662004A0FA5 /* PIPVideoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDED868F2461B662004A0FA5 /* PIPVideoVC.swift */; };
+		DDED86922461B6FE004A0FA5 /* PIPVideoVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDED86912461B6FE004A0FA5 /* PIPVideoVM.swift */; };
+		DDED86942461B705004A0FA5 /* PIPVideoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = DDED86932461B705004A0FA5 /* PIPVideoVC.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -97,6 +102,9 @@
 		DD1D1D9F2461CBC700FD122A /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		DD1D1DA12461CBCC00FD122A /* SettingsVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVM.swift; sourceTree = "<group>"; };
 		DD316C16245611EA00420D11 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		DD3C34A624644D0500C244B4 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
+		DD3C34A924644D1400C244B4 /* MainVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVM.swift; sourceTree = "<group>"; };
+		DD3C34AB24644D1B00C244B4 /* MainVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainVC.xib; sourceTree = "<group>"; };
 		DD3E108024540E9300B900C7 /* CallVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallVM.swift; sourceTree = "<group>"; };
 		DD3E1082245411F100B900C7 /* CallVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CallVC.xib; sourceTree = "<group>"; };
 		DD3E1084245415A600B900C7 /* UIViewController+HideKeyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+HideKeyboard.swift"; sourceTree = "<group>"; };
@@ -116,6 +124,7 @@
 		DD7B68F8245818F400BAB913 /* WebRTCService+RTCDataChannelDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WebRTCService+RTCDataChannelDelegate.swift"; sourceTree = "<group>"; };
 		DD7B68FA2458192000BAB913 /* WebRTCService+RTCPeerConnectionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WebRTCService+RTCPeerConnectionDelegate.swift"; sourceTree = "<group>"; };
 		DD7B68FC2458194500BAB913 /* AudioClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioClient.swift; sourceTree = "<group>"; };
+		DD91AA69246448BD0031AEE1 /* VideoClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoClient.swift; sourceTree = "<group>"; };
 		DDA9CE59243A40C8008F5BFE /* UIApplication+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIApplication+Extension.swift"; sourceTree = "<group>"; };
 		DDA9CE5A243A40C8008F5BFE /* RegisterNibsExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterNibsExtension.swift; sourceTree = "<group>"; };
 		DDA9CE5C243A40C8008F5BFE /* UIScrollView+Bond.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIScrollView+Bond.swift"; sourceTree = "<group>"; };
@@ -138,9 +147,10 @@
 		DDA9CE81243A437A008F5BFE /* BaseServiceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseServiceError.swift; sourceTree = "<group>"; };
 		DDC0D580245F56B00051BA5E /* WebRTCView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebRTCView.swift; sourceTree = "<group>"; };
 		DDCAB543245802A70099ADD9 /* cat.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = cat.mp4; sourceTree = "<group>"; };
-		DDED868F2461B662004A0FA5 /* MeVideoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeVideoVC.swift; sourceTree = "<group>"; };
-		DDED86912461B6FE004A0FA5 /* MeVideoVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeVideoVM.swift; sourceTree = "<group>"; };
-		DDED86932461B705004A0FA5 /* MeVideoVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MeVideoVC.xib; sourceTree = "<group>"; };
+		DDE36BE8246446EA00498795 /* Encodable+Dictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Encodable+Dictionary.swift"; sourceTree = "<group>"; };
+		DDED868F2461B662004A0FA5 /* PIPVideoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PIPVideoVC.swift; sourceTree = "<group>"; };
+		DDED86912461B6FE004A0FA5 /* PIPVideoVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PIPVideoVM.swift; sourceTree = "<group>"; };
+		DDED86932461B705004A0FA5 /* PIPVideoVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PIPVideoVC.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -196,14 +206,25 @@
 			isa = PBXGroup;
 			children = (
 				DDB7C34A24581E5700614FEA /* Base */,
-				DD7B68F62458183100BAB913 /* WebRTCClient */,
-				DD4A3B2F24558DDA00871A0B /* SignalingClient.swift */,
+				DD7B68F62458183100BAB913 /* WebRTC */,
+				DDE36BEB246447DB00498795 /* Signaling */,
 				DDCBB9D2243A28FF006DE46B /* Modules */,
+				DDE36BEA2464473000498795 /* Helpers */,
 				DD50EA5C2458082B00B83F36 /* Resources */,
 				DD1C075B24372FDB000C6972 /* GoogleService-Info.plist */,
 				DD1C075524372FBB000C6972 /* Info.plist */,
 			);
 			path = "Walkie-Talkie";
+			sourceTree = "<group>";
+		};
+		DD3C34A824644D0900C244B4 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				DD3C34A924644D1400C244B4 /* MainVM.swift */,
+				DD3C34A624644D0500C244B4 /* MainVC.swift */,
+				DD3C34AB24644D1B00C244B4 /* MainVC.xib */,
+			);
+			path = Main;
 			sourceTree = "<group>";
 		};
 		DD4A3B27245589CE00871A0B /* Call */ = {
@@ -277,16 +298,17 @@
 			path = VideoView;
 			sourceTree = "<group>";
 		};
-		DD7B68F62458183100BAB913 /* WebRTCClient */ = {
+		DD7B68F62458183100BAB913 /* WebRTC */ = {
 			isa = PBXGroup;
 			children = (
 				DD4A3B372455927C00871A0B /* Extensions */,
 				DD4A3B2824558DC500871A0B /* WebRTCClient.swift */,
-				DD7B68FC2458194500BAB913 /* AudioClient.swift */,
 				DD7B68FA2458192000BAB913 /* WebRTCService+RTCPeerConnectionDelegate.swift */,
 				DD7B68F8245818F400BAB913 /* WebRTCService+RTCDataChannelDelegate.swift */,
+				DD7B68FC2458194500BAB913 /* AudioClient.swift */,
+				DD91AA69246448BD0031AEE1 /* VideoClient.swift */,
 			);
-			path = WebRTCClient;
+			path = WebRTC;
 			sourceTree = "<group>";
 		};
 		DD7B68F72458184500BAB913 /* Router */ = {
@@ -346,7 +368,6 @@
 			children = (
 				DD1C074724372FB9000C6972 /* AppDelegate.swift */,
 				DD1C074924372FB9000C6972 /* SceneDelegate.swift */,
-				DDA9CE58243A40C8008F5BFE /* Shared */,
 				DD7B68F72458184500BAB913 /* Router */,
 			);
 			path = Base;
@@ -364,22 +385,40 @@
 			isa = PBXGroup;
 			children = (
 				DD6F708F24630C4E00FCBCEA /* VideoView */,
-				DDED86952461B717004A0FA5 /* MyVideo */,
+				DDED86952461B717004A0FA5 /* PIP */,
 				DD4A3B27245589CE00871A0B /* Call */,
 				DD6F708A2462EE2F00FCBCEA /* Settings */,
 				DD6F70892462EE2600FCBCEA /* JoinView */,
+				DD3C34A824644D0900C244B4 /* Main */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
 		};
-		DDED86952461B717004A0FA5 /* MyVideo */ = {
+		DDE36BEA2464473000498795 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				DDED86912461B6FE004A0FA5 /* MeVideoVM.swift */,
-				DDED868F2461B662004A0FA5 /* MeVideoVC.swift */,
-				DDED86932461B705004A0FA5 /* MeVideoVC.xib */,
+				DDA9CE58243A40C8008F5BFE /* Shared */,
+				DDE36BE8246446EA00498795 /* Encodable+Dictionary.swift */,
 			);
-			path = MyVideo;
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		DDE36BEB246447DB00498795 /* Signaling */ = {
+			isa = PBXGroup;
+			children = (
+				DD4A3B2F24558DDA00871A0B /* SignalingClient.swift */,
+			);
+			path = Signaling;
+			sourceTree = "<group>";
+		};
+		DDED86952461B717004A0FA5 /* PIP */ = {
+			isa = PBXGroup;
+			children = (
+				DDED86912461B6FE004A0FA5 /* PIPVideoVM.swift */,
+				DDED868F2461B662004A0FA5 /* PIPVideoVC.swift */,
+				DDED86932461B705004A0FA5 /* PIPVideoVC.xib */,
+			);
+			path = PIP;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -443,10 +482,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD3C34AC24644D1B00C244B4 /* MainVC.xib in Resources */,
 				DD6F70882462EE2200FCBCEA /* JoinView.xib in Resources */,
 				DD50EA5B2458082500B83F36 /* cat.mp4 in Resources */,
 				DD1C075424372FBB000C6972 /* LaunchScreen.storyboard in Resources */,
-				DDED86942461B705004A0FA5 /* MeVideoVC.xib in Resources */,
+				DDED86942461B705004A0FA5 /* PIPVideoVC.xib in Resources */,
 				DD1C075C24372FDB000C6972 /* GoogleService-Info.plist in Resources */,
 				DD1D1D9E2461CBB600FD122A /* SettingsView.xib in Resources */,
 				DD1C075124372FBB000C6972 /* Assets.xcassets in Resources */,
@@ -509,6 +549,7 @@
 				DD3E108124540E9300B900C7 /* CallVM.swift in Sources */,
 				DDA9CE70243A40C9008F5BFE /* UIScrollView+Bond.swift in Sources */,
 				DDA9CE6E243A40C9008F5BFE /* UIApplication+Extension.swift in Sources */,
+				DD3C34A724644D0500C244B4 /* MainVC.swift in Sources */,
 				DD1D1DA02461CBC700FD122A /* SettingsView.swift in Sources */,
 				DDC0D581245F56B00051BA5E /* WebRTCView.swift in Sources */,
 				DD4A3B3424558DDA00871A0B /* WebRTCClientDelegate.swift in Sources */,
@@ -527,19 +568,22 @@
 				DD4A3B3524558DDA00871A0B /* SignalingClient.swift in Sources */,
 				DDA9CE74243A40C9008F5BFE /* SelectableTableCell.swift in Sources */,
 				DDA9CE82243A437A008F5BFE /* BaseServiceError.swift in Sources */,
-				DDED86902461B662004A0FA5 /* MeVideoVC.swift in Sources */,
+				DDE36BE9246446EA00498795 /* Encodable+Dictionary.swift in Sources */,
+				DDED86902461B662004A0FA5 /* PIPVideoVC.swift in Sources */,
 				DD57B847245EE9E900B84F8A /* SdpType.swift in Sources */,
 				DD1C074A24372FB9000C6972 /* SceneDelegate.swift in Sources */,
 				DD6F708C2462F5F800FCBCEA /* VideoView.swift in Sources */,
 				DD6F70862462EE1700FCBCEA /* JoinVM.swift in Sources */,
+				DD3C34AA24644D1400C244B4 /* MainVM.swift in Sources */,
 				DD316C17245611EA00420D11 /* Config.swift in Sources */,
 				DDA9CE76243A40C9008F5BFE /* BondViewModel.swift in Sources */,
 				DD4A3B2924558DC500871A0B /* WebRTCClient.swift in Sources */,
 				DDA9CE75243A40C9008F5BFE /* XibLoadedVC.swift in Sources */,
+				DD91AA6A246448BD0031AEE1 /* VideoClient.swift in Sources */,
 				DD7B68FB2458192000BAB913 /* WebRTCService+RTCPeerConnectionDelegate.swift in Sources */,
 				DD4A3B3D2455927C00871A0B /* IceCandidate.swift in Sources */,
 				DD6F70842462EE1100FCBCEA /* JoinView.swift in Sources */,
-				DDED86922461B6FE004A0FA5 /* MeVideoVM.swift in Sources */,
+				DDED86922461B6FE004A0FA5 /* PIPVideoVM.swift in Sources */,
 				DD3E1087245416C400B900C7 /* Router.swift in Sources */,
 				DD3E1085245415A600B900C7 /* UIViewController+HideKeyboard.swift in Sources */,
 				DDA9CE79243A40C9008F5BFE /* BackableVM.swift in Sources */,

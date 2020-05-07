@@ -17,6 +17,8 @@ final class AudioClient {
         self.webRTCService = webRTCService
     }
     
+    //MARK: - Public
+    
     public func muteAudio() {
         setAudioEnabled(false)
     }
@@ -26,39 +28,11 @@ final class AudioClient {
     }
     
     public func speakerOn() {
-        audioQueue.async { [weak self] in
-            guard let me = self else {
-                return
-            }
-
-            me.webRTCService.rtcAudioSession.lockForConfiguration()
-            
-            do {
-                try me.webRTCService.rtcAudioSession.setCategory(AVAudioSession.Category.playAndRecord.rawValue)
-                try me.webRTCService.rtcAudioSession.overrideOutputAudioPort(.speaker)
-                try me.webRTCService.rtcAudioSession.setActive(true)
-            } catch let error {
-                debugPrint("WebRTCClient Couldn't force audio to speaker: \(error)")
-            }
-            me.webRTCService.rtcAudioSession.unlockForConfiguration()
-        }
+        setSpeaker(isOn: true)
     }
-        
+    
     public func speakerOff() {
-        audioQueue.async { [weak self] in
-            guard let me = self else {
-                return
-            }
-            
-            me.webRTCService.rtcAudioSession.lockForConfiguration()
-            do {
-                try me.webRTCService.rtcAudioSession.setCategory(AVAudioSession.Category.playAndRecord.rawValue)
-                try me.webRTCService.rtcAudioSession.overrideOutputAudioPort(.none)
-            } catch let error {
-                debugPrint("Error setting AVAudioSession category: \(error)")
-            }
-            me.webRTCService.rtcAudioSession.unlockForConfiguration()
-        }
+        setSpeaker(isOn: false)
     }
     
     //MARK: - Private
@@ -66,6 +40,30 @@ final class AudioClient {
     private func setAudioEnabled(_ isEnabled: Bool) {
         let audioTracks = webRTCService.peerConnection.transceivers.compactMap { return $0.sender.track as? RTCAudioTrack }
         audioTracks.forEach { $0.isEnabled = isEnabled }
+    }
+    
+    private func setSpeaker(isOn: Bool) {
+        audioQueue.async { [weak self] in
+            guard let me = self else {
+                return
+            }
+            
+            me.webRTCService.rtcAudioSession.lockForConfiguration()
+            //
+            do {
+                try me.webRTCService.rtcAudioSession.setCategory(AVAudioSession.Category.playAndRecord.rawValue)
+                //
+                if isOn {
+                    try me.webRTCService.rtcAudioSession.overrideOutputAudioPort(.speaker)
+                    try me.webRTCService.rtcAudioSession.setActive(true)
+                } else {
+                    try me.webRTCService.rtcAudioSession.overrideOutputAudioPort(.none)
+                }
+            } catch let error {
+                debugPrint("Error setting AVAudioSession category: \(error)")
+            }
+            me.webRTCService.rtcAudioSession.unlockForConfiguration()
+        }
     }
 }
 

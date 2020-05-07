@@ -23,13 +23,13 @@ public final class Router: NSObject {
     public override init() {
         super.init()
         
-        let rootVC                      = CallVC()
-        rootVC.viewModel                = CallVM()
+        let rootVC = MainVC()
+        rootVC.viewModel = MainVM()
         rootNavigation = UINavigationController(rootViewController: rootVC)
         IQKeyboardManager.shared.enable = true
         IQKeyboardManager.shared.previousNextDisplayMode = .alwaysShow
         IQKeyboardManager.shared.toolbarManageBehaviour = .byPosition
-
+        
     }
     
     public func configureAppearance() {
@@ -37,7 +37,7 @@ public final class Router: NSObject {
         navigationBarAppearace.tintColor    = .white
         navigationBarAppearace.barTintColor = UIColor(red: 0.149, green: 0.09, blue: 0.345, alpha: 1)
     }
-        
+    
     public func makeVisible()  {
         window = UIWindow()
         window!.rootViewController = rootNavigation

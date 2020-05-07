@@ -1,27 +1,25 @@
 //
-//  CallVM.swift
+//  MainVM.swift
 //  Walkie-Talkie
 //
-//  Created by Zaporozhchenko Oleksandr on 4/25/20.
+//  Created by Zaporozhchenko Oleksandr on 5/7/20.
 //  Copyright © 2020 maxatma. All rights reserved.
 //
 
-import ReactiveKit
-import Bond
-import WebRTC
+import Foundation
 
 
-final class CallVM: BondViewModel {
+final class MainVM: BondViewModel {
     var webRTCClient: WebRTCClient!
-    var settingsVM: SettingsVM!
+    var joinVM: JoinVM!
     var videoVM: VideoVM!
-    var meVideoVM: PIPVideoVM!
     
     override init() {
         super.init()
         webRTCClient = WebRTCClient(iceServers: Config.shared.iceServers)
-        settingsVM = SettingsVM(webRTCClient: webRTCClient)
+        joinVM = JoinVM(webRTCClient: webRTCClient)
         videoVM = VideoVM(webRTCClient: webRTCClient)
         meVideoVM = PIPVideoVM(webRTCClient: webRTCClient)
     }
 }
+
