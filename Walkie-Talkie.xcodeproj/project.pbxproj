@@ -43,6 +43,11 @@
 		DD7B68FB2458192000BAB913 /* WebRTCService+RTCPeerConnectionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7B68FA2458192000BAB913 /* WebRTCService+RTCPeerConnectionDelegate.swift */; };
 		DD7B68FD2458194500BAB913 /* AudioClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7B68FC2458194500BAB913 /* AudioClient.swift */; };
 		DD91AA6A246448BD0031AEE1 /* VideoClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD91AA69246448BD0031AEE1 /* VideoClient.swift */; };
+		DD9DED832465CE720009F598 /* MainToCallAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9DED822465CE720009F598 /* MainToCallAnimator.swift */; };
+		DD9DED882465D42F0009F598 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9DED872465D42F0009F598 /* UIView+Extension.swift */; };
+		DD9DED8A2465D9430009F598 /* BaseAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9DED892465D9430009F598 /* BaseAnimator.swift */; };
+		DD9DED8C2465E78F0009F598 /* MainVC+UINavigationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9DED8B2465E78F0009F598 /* MainVC+UINavigationDelegate.swift */; };
+		DD9DED8F2465F4610009F598 /* CallToMainAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9DED8E2465F4610009F598 /* CallToMainAnimator.swift */; };
 		DDA9CE6E243A40C9008F5BFE /* UIApplication+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA9CE59243A40C8008F5BFE /* UIApplication+Extension.swift */; };
 		DDA9CE6F243A40C9008F5BFE /* RegisterNibsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA9CE5A243A40C8008F5BFE /* RegisterNibsExtension.swift */; };
 		DDA9CE70243A40C9008F5BFE /* UIScrollView+Bond.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA9CE5C243A40C8008F5BFE /* UIScrollView+Bond.swift */; };
@@ -125,6 +130,11 @@
 		DD7B68FA2458192000BAB913 /* WebRTCService+RTCPeerConnectionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WebRTCService+RTCPeerConnectionDelegate.swift"; sourceTree = "<group>"; };
 		DD7B68FC2458194500BAB913 /* AudioClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioClient.swift; sourceTree = "<group>"; };
 		DD91AA69246448BD0031AEE1 /* VideoClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoClient.swift; sourceTree = "<group>"; };
+		DD9DED822465CE720009F598 /* MainToCallAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainToCallAnimator.swift; sourceTree = "<group>"; };
+		DD9DED872465D42F0009F598 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		DD9DED892465D9430009F598 /* BaseAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAnimator.swift; sourceTree = "<group>"; };
+		DD9DED8B2465E78F0009F598 /* MainVC+UINavigationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainVC+UINavigationDelegate.swift"; sourceTree = "<group>"; };
+		DD9DED8E2465F4610009F598 /* CallToMainAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallToMainAnimator.swift; sourceTree = "<group>"; };
 		DDA9CE59243A40C8008F5BFE /* UIApplication+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIApplication+Extension.swift"; sourceTree = "<group>"; };
 		DDA9CE5A243A40C8008F5BFE /* RegisterNibsExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterNibsExtension.swift; sourceTree = "<group>"; };
 		DDA9CE5C243A40C8008F5BFE /* UIScrollView+Bond.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIScrollView+Bond.swift"; sourceTree = "<group>"; };
@@ -223,6 +233,7 @@
 				DD3C34A924644D1400C244B4 /* MainVM.swift */,
 				DD3C34A624644D0500C244B4 /* MainVC.swift */,
 				DD3C34AB24644D1B00C244B4 /* MainVC.xib */,
+				DD9DED8D2465E7EF0009F598 /* Animations */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -317,6 +328,18 @@
 				DD3E1086245416C400B900C7 /* Router.swift */,
 			);
 			path = Router;
+			sourceTree = "<group>";
+		};
+		DD9DED8D2465E7EF0009F598 /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+				DD9DED822465CE720009F598 /* MainToCallAnimator.swift */,
+				DD9DED8E2465F4610009F598 /* CallToMainAnimator.swift */,
+				DD9DED8B2465E78F0009F598 /* MainVC+UINavigationDelegate.swift */,
+				DD9DED892465D9430009F598 /* BaseAnimator.swift */,
+				DD9DED872465D42F0009F598 /* UIView+Extension.swift */,
+			);
+			path = Animations;
 			sourceTree = "<group>";
 		};
 		DDA9CE58243A40C8008F5BFE /* Shared */ = {
@@ -546,6 +569,7 @@
 				DD6F708E246309EF00FCBCEA /* VideoVM.swift in Sources */,
 				DDA9CE71243A40C9008F5BFE /* UIPageViewController+Bond.swift in Sources */,
 				DDA9CE73243A40C9008F5BFE /* UIDocumentPickerViewController+Bond.swift in Sources */,
+				DD9DED8F2465F4610009F598 /* CallToMainAnimator.swift in Sources */,
 				DD3E108124540E9300B900C7 /* CallVM.swift in Sources */,
 				DDA9CE70243A40C9008F5BFE /* UIScrollView+Bond.swift in Sources */,
 				DDA9CE6E243A40C9008F5BFE /* UIApplication+Extension.swift in Sources */,
@@ -555,13 +579,16 @@
 				DD4A3B3424558DDA00871A0B /* WebRTCClientDelegate.swift in Sources */,
 				DDA9CE7B243A40C9008F5BFE /* BondTableView.swift in Sources */,
 				DD7B68FD2458194500BAB913 /* AudioClient.swift in Sources */,
+				DD9DED8C2465E78F0009F598 /* MainVC+UINavigationDelegate.swift in Sources */,
 				DD1C074C24372FB9000C6972 /* CallVC.swift in Sources */,
 				DD1D1DA22461CBCC00FD122A /* SettingsVM.swift in Sources */,
+				DD9DED882465D42F0009F598 /* UIView+Extension.swift in Sources */,
 				DDA9CE7E243A40C9008F5BFE /* UITableView+Bond.swift in Sources */,
 				DD1C074824372FB9000C6972 /* AppDelegate.swift in Sources */,
 				DD4A3B3B2455927C00871A0B /* RTCStates.swift in Sources */,
 				DDA9CE80243A40C9008F5BFE /* UIStoryboard+Extensions.swift in Sources */,
 				DDA9CE6F243A40C9008F5BFE /* RegisterNibsExtension.swift in Sources */,
+				DD9DED8A2465D9430009F598 /* BaseAnimator.swift in Sources */,
 				DDA9CE7F243A40C9008F5BFE /* UIButton+ThrottledTap.swift in Sources */,
 				DDA9CE72243A40C9008F5BFE /* UISearchBar+Bond.swift in Sources */,
 				DDA9CE78243A40C9008F5BFE /* BondCollectionCell.swift in Sources */,
@@ -575,6 +602,7 @@
 				DD6F708C2462F5F800FCBCEA /* VideoView.swift in Sources */,
 				DD6F70862462EE1700FCBCEA /* JoinVM.swift in Sources */,
 				DD3C34AA24644D1400C244B4 /* MainVM.swift in Sources */,
+				DD9DED832465CE720009F598 /* MainToCallAnimator.swift in Sources */,
 				DD316C17245611EA00420D11 /* Config.swift in Sources */,
 				DDA9CE76243A40C9008F5BFE /* BondViewModel.swift in Sources */,
 				DD4A3B2924558DC500871A0B /* WebRTCClient.swift in Sources */,

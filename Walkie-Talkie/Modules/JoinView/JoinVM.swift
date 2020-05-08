@@ -26,11 +26,12 @@ final class JoinVM: BondViewModel {
         self.webRTCClient = webRTCClient
         webRTCClient.delegate = self
         signalingClient = SignalingClient.shared
-
+    
         create
             .observeNext { [weak self] in
                 guard let me = self else { return }
                 me.isCreatingRoom.next(true)
+                Router.shared.showCall()
                 print("create ")
                 me.signalingClient.createRoom()
                 me.webRTCClient.offer { rtcDescription in

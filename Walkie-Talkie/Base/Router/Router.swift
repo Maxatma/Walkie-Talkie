@@ -29,7 +29,7 @@ public final class Router: NSObject {
         IQKeyboardManager.shared.enable = true
         IQKeyboardManager.shared.previousNextDisplayMode = .alwaysShow
         IQKeyboardManager.shared.toolbarManageBehaviour = .byPosition
-        
+        IQKeyboardManager.shared.disabledDistanceHandlingClasses = [MainVC.self, CallVC.self]
     }
     
     public func configureAppearance() {
@@ -139,3 +139,13 @@ public final class Router: NSObject {
     }
 }
 
+
+extension Router {
+    func showCall() {
+        let webRTCClient = WebRTCClient(iceServers: Config.shared.iceServers)
+        let vm = CallVM(webRTCClient: webRTCClient)
+        let vc = CallVC()
+        vc.viewModel = vm
+        push(vc)
+    }
+}

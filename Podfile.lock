@@ -286,6 +286,7 @@ PODS:
     - BoringSSL-GRPC (= 0.0.7)
     - gRPC-Core/Interface (= 1.28.0)
   - gRPC-Core/Interface (1.28.0)
+  - IHKeyboardAvoiding (4.7)
   - IQKeyboardManagerSwift (6.5.5)
   - leveldb-library (1.22)
   - nanopb (1.30905.0):
@@ -302,6 +303,7 @@ DEPENDENCIES:
   - Bond (= 6.10.2)
   - Firebase/Firestore
   - GoogleWebRTC
+  - IHKeyboardAvoiding
   - IQKeyboardManagerSwift
   - PIPKit
   - ReactiveKit (= 3.9.7)
@@ -325,6 +327,7 @@ SPEC REPOS:
     - GoogleWebRTC
     - "gRPC-C++"
     - gRPC-Core
+    - IHKeyboardAvoiding
     - IQKeyboardManagerSwift
     - leveldb-library
     - nanopb
@@ -350,6 +353,7 @@ SPEC CHECKSUMS:
   GoogleWebRTC: cfb83bc346435a17fe06bb05f04ad826b858a7fb
   "gRPC-C++": 2ea13a2e14f0b89991a0b4b0151e7c6a56319516
   gRPC-Core: 325ba201411619a7302c621a1c8ee787719d4b9b
+  IHKeyboardAvoiding: 4cae0880c3975feffa278495df894c5166e71ad0
   IQKeyboardManagerSwift: 0fb93310284665245591f50f7a5e38de615960b7
   leveldb-library: 55d93ee664b4007aac644a782d11da33fba316f7
   nanopb: c43f40fadfe79e8b8db116583945847910cbabc9
@@ -358,6 +362,6 @@ SPEC CHECKSUMS:
   ReactiveKit: 5f4c440715d671901c382ae6b42ed3337ce4699b
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
 
-PODFILE CHECKSUM: 44ad939dc28636277be53b09f4886a2eb90e6a40
+PODFILE CHECKSUM: 1d2b6f98b6f902e74ff41d84fe8737db76e82f5b
 
 COCOAPODS: 1.9.1

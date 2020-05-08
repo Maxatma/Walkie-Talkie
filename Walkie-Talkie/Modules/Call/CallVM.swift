@@ -17,11 +17,10 @@ final class CallVM: BondViewModel {
     var videoVM: VideoVM!
     var meVideoVM: PIPVideoVM!
     
-    override init() {
+    init(webRTCClient: WebRTCClient) {
         super.init()
-        webRTCClient = WebRTCClient(iceServers: Config.shared.iceServers)
         settingsVM = SettingsVM(webRTCClient: webRTCClient)
-        videoVM = VideoVM(webRTCClient: webRTCClient)
-        meVideoVM = PIPVideoVM(webRTCClient: webRTCClient)
+        videoVM = VideoVM(webRTCClient: webRTCClient, videoSource: .remote)
+        meVideoVM = PIPVideoVM(webRTCClient: webRTCClient, videoSource: .localFile(name: "cat.mp4"))
     }
 }

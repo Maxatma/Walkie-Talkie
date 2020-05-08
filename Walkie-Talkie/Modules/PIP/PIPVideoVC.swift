@@ -11,8 +11,8 @@ import PIPKit
 
 
 final class PIPVideoVC: BondVC, PIPUsable {
-    var vm: MeVideoVM {
-        return viewModel as! MeVideoVM
+    var vm: PIPVideoVM {
+        return viewModel as! PIPVideoVM
     }
     
     @IBOutlet var video: VideoView!
@@ -27,6 +27,10 @@ final class PIPVideoVC: BondVC, PIPUsable {
     override func advise() {
         super.advise()
         video.vm = vm.videoVM
+    }
+    
+    var initialPosition: PIPPosition {
+        return .topRight
     }
 }
 

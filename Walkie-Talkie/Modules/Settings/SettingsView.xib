@@ -7,9 +7,16 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SettingsView" customModule="Walkie_Talkie" customModuleProvider="target">
+            <connections>
+                <outlet property="hangup" destination="uk5-94-2kL" id="t6j-Kf-VY5"/>
+                <outlet property="microphone" destination="Ah2-OT-hEc" id="Oqa-xX-qPf"/>
+                <outlet property="sound" destination="mEV-p3-Iwl" id="rDT-0A-fum"/>
+                <outlet property="video" destination="l8h-qQ-VUd" id="pd3-NN-PsG"/>
+            </connections>
+        </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="SettingsView" customModule="Walkie_Talkie" customModuleProvider="target">
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="367" height="93"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
@@ -35,7 +42,7 @@
                     </subviews>
                 </stackView>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="rO5-a6-Vr2" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Dtz-YM-XNU"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="rO5-a6-Vr2" secondAttribute="trailing" id="TE8-Pl-yCD"/>

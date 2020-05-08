@@ -19,7 +19,7 @@ final class CallVC: BondVC {
     @IBOutlet var caller: WebRTCView!
     @IBOutlet var settings: SettingsView!
     
-    private let pipVC = PIPVideoVC()
+    let pipVC = PIPVideoVC()
     
     override func viewDidLoad() {
         super.viewDidLoad()

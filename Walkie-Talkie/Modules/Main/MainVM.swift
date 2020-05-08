@@ -18,8 +18,7 @@ final class MainVM: BondViewModel {
         super.init()
         webRTCClient = WebRTCClient(iceServers: Config.shared.iceServers)
         joinVM = JoinVM(webRTCClient: webRTCClient)
-        videoVM = VideoVM(webRTCClient: webRTCClient)
-        meVideoVM = PIPVideoVM(webRTCClient: webRTCClient)
+        videoVM = VideoVM(webRTCClient: webRTCClient, videoSource: .localFile(name: "cat.mp4"))
     }
 }
 

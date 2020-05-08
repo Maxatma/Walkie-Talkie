@@ -13,10 +13,10 @@ final class PIPVideoVM: BondViewModel {
     var webRTCClient: WebRTCClient!
     var videoVM: VideoVM!
     
-    init(webRTCClient: WebRTCClient) {
+    init(webRTCClient: WebRTCClient, videoSource: VideoSource) {
         super.init()
         self.webRTCClient = webRTCClient
-        videoVM = VideoVM(webRTCClient: webRTCClient)
+        videoVM = VideoVM(webRTCClient: webRTCClient, videoSource: videoSource)
     }
 }
 

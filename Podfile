@@ -13,6 +13,7 @@ def main
   pod 'ReactiveKit', '3.9.7'
   pod 'SnapKit'
   pod 'IQKeyboardManagerSwift'
+  pod 'IHKeyboardAvoiding'
 end
 
 def firebase
