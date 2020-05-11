@@ -24,6 +24,8 @@ final class JoinView: BondView {
         join.reactive.tap.bind(to: vm.join).dispose(in: bag)
         roomID.reactive.text.ignoreNil().bind(to: vm.roomID).dispose(in: bag)
         vm.roomID.bind(to: roomID.reactive.text).dispose(in: bag)
+        roomID.reactive.text.map { $0 != nil && $0!.count > 0 }.bind(to: create.reactive.isEnabled).dispose(in: bag)
+        roomID.reactive.text.map { $0 != nil && $0!.count > 0 }.bind(to: join.reactive.isEnabled).dispose(in: bag)
     }
 }
 

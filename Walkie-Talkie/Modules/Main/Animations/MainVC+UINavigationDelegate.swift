@@ -23,7 +23,10 @@ extension MainVC: UINavigationControllerDelegate {
             }
             return MainToCallAnimator()
         case .pop:
-            return nil
+            guard fromVC is CallVC && toVC is MainVC else {
+                return nil
+            }
+            return CallToMainAnimator()
         default:
             return nil
         }

@@ -11,10 +11,6 @@ import UIKit
 
 final class MainToCallAnimator: BaseAnimator<MainVC, CallVC> {
     
-    override func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
-        return 1.5
-    }
-    
     override func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
         super.animateTransition(using: transitionContext)
         

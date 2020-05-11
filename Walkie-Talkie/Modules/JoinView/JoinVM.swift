@@ -16,22 +16,24 @@ final class JoinVM: BondViewModel {
     var signalingClient: SignalingClient!
     let isCreatingRoom = Observable<Bool>(true)
     let state = Observable<String>("")
-
+    
     let create = SafePublishSubject<Void>()
     let join = SafePublishSubject<Void>()
     let roomID = Observable<String>("")
-
+    
     init(webRTCClient: WebRTCClient) {
         super.init()
         self.webRTCClient = webRTCClient
         webRTCClient.delegate = self
         signalingClient = SignalingClient.shared
-    
+        
+        create.map { true }.bind(to: isCreatingRoom).dispose(in: bag)
+        join.map { false }.bind(to: isCreatingRoom).dispose(in: bag)
+
         create
             .observeNext { [weak self] in
                 guard let me = self else { return }
-                me.isCreatingRoom.next(true)
-                Router.shared.showCall()
+                Router.shared.showCall(webRTCClient: webRTCClient)
                 print("create ")
                 me.signalingClient.createRoom()
                 me.webRTCClient.offer { rtcDescription in
@@ -67,8 +69,7 @@ final class JoinVM: BondViewModel {
             .observeNext { [weak self] in
                 guard let me = self else { return }
                 print("join ")
-                me.isCreatingRoom.next(false)
-
+                
                 me.signalingClient
                     .getRemoteIceCandidates(id: me.roomID.value, name: "callerCandidates")
                     .observeNext { candiates in
@@ -90,10 +91,11 @@ final class JoinVM: BondViewModel {
                                         print("webRTCClient set description done! ")
                                     }
                                 }
-
+                                
                                 me.webRTCClient.answer { descr in
                                     print("descr is ", descr)
                                     me.signalingClient.createAnswer(desc: SessionDescription(from: descr), id: me.roomID.value)
+                                    Router.shared.showCall(webRTCClient: webRTCClient)
                                 }
                         }
                         .dispose(in: me.bag)
@@ -109,7 +111,7 @@ extension JoinVM: WebRTCClientDelegate {
     
     func webRTCClient(_ client: WebRTCClient, didDiscoverLocalCandidate candidate: RTCIceCandidate) {
         print("WebRTCClientDelegate didDiscoverLocalCandidate ")
-        
+        print("isCreating ", isCreatingRoom.value)
         let candidate = IceCandidate(from: candidate)
         
         signalingClient.collect(iceCandidate: candidate,

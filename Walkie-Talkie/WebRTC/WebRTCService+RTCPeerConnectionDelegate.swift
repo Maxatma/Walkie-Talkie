@@ -46,7 +46,6 @@ extension WebRTCClient: RTCPeerConnectionDelegate {
     
     func peerConnection(_ peerConnection: RTCPeerConnection, didOpen dataChannel: RTCDataChannel) {
         debugPrint("peer connection did open data channel")
-        remoteDataChannel = dataChannel
     }
 }
 

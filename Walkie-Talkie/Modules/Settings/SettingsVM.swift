@@ -46,9 +46,11 @@ final class SettingsVM: BondViewModel {
         
         hangup.observeNext { _ in
             print("hang up call")
+            webRTCClient.hangup()
+            Router.shared.pop()
+            webRTCClient.startCall()
         }
         .dispose(in: bag)
-        
     }
 }
 

@@ -12,7 +12,7 @@ import UIKit
 class BaseAnimator<FromVC:UIViewController, ToVC:UIViewController> : NSObject, UIViewControllerAnimatedTransitioning {
 
     func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
-        return 10
+        return 1
     }
     
     func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {

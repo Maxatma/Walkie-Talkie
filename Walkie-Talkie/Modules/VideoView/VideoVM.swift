@@ -28,7 +28,6 @@ final class VideoVM: BondViewModel {
         case let .localFile(name):
             webRTCClient.startCaptureLocalVideoFile(name: name, renderer: view)
         }
-        webRTCClient.startCaptureLocalVideoFile(name: "cat.mp4", renderer: view)
     }
 }
 

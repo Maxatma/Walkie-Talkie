@@ -10,11 +10,7 @@ import UIKit
 
 
 final class CallToMainAnimator: BaseAnimator<CallVC, MainVC> {
-    
-    override func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
-        return 1.5
-    }
-    
+        
     override func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
         super.animateTransition(using: transitionContext)
         
@@ -56,7 +52,7 @@ final class CallToMainAnimator: BaseAnimator<CallVC, MainVC> {
                                 UIView.addKeyframe(withRelativeStartTime: 0,
                                                    relativeDuration: 1,
                                                    animations: { [unowned self] in
-                                                    videoViewSnapshot.frame = self.toVC.myVideo.frameOfViewInWindowsCoordinateSystem()
+                                                    videoViewSnapshot.frame = self.toVC.myVideo.videoView.frameOfViewInWindowsCoordinateSystem()
                                 })
                                 
                                 UIView.addKeyframe(withRelativeStartTime: 0,

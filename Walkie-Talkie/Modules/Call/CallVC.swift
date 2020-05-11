@@ -6,7 +6,6 @@
 //  Copyright © 2020 maxatma. All rights reserved.
 //
 
-import UIKit
 import WebRTC
 import PIPKit
 
@@ -24,17 +23,27 @@ final class CallVC: BondVC {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.navigationBar.isHidden = true
-        hideKeyboardWhenTappedAround()
         advise()
-        
-        pipVC.viewModel = vm.meVideoVM
         PIPKit.show(with: pipVC)
+        hideAllWhenTappedAround()
     }
     
     override func advise() {
         super.advise()
         caller.videoView.vm = vm.videoVM
         settings.viewModel = vm.settingsVM
+        pipVC.viewModel = vm.meVideoVM
+    }
+    
+    private func hideAllWhenTappedAround() {
+        let tap = UITapGestureRecognizer(target: self, action: #selector(Self.dissmissAll))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc func dissmissAll() {
+        settings.alpha = settings.alpha == 0 ? 1 : 0
+        pipVC.view.alpha = pipVC.view.alpha == 0 ? 1 : 0
     }
 }
 

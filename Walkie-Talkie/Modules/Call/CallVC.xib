@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -34,9 +34,11 @@
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="Ob0-6m-RX1" secondAttribute="trailing" id="C1Z-tI-EZU"/>
+                <constraint firstItem="RvB-FL-Csb" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="0.5" id="F1P-bv-9Dw"/>
                 <constraint firstItem="Ob0-6m-RX1" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Qcv-ZQ-Rtt"/>
-                <constraint firstItem="RvB-FL-Csb" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Ufo-Lk-jos"/>
+                <constraint firstItem="RvB-FL-Csb" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Ufo-Lk-jos"/>
                 <constraint firstItem="RvB-FL-Csb" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="aL7-4e-3Xs"/>
+                <constraint firstItem="RvB-FL-Csb" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" id="dVM-4B-gOh"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="RvB-FL-Csb" secondAttribute="bottom" id="nfT-Zd-NFj"/>
                 <constraint firstAttribute="bottom" secondItem="Ob0-6m-RX1" secondAttribute="bottom" id="qrg-Ds-l8O"/>
                 <constraint firstItem="Ob0-6m-RX1" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="zw5-fn-2yc"/>
@@ -44,7 +46,18 @@
             <nil key="simulatedTopBarMetrics"/>
             <nil key="simulatedBottomBarMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <point key="canvasLocation" x="-538" y="-281"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="dVM-4B-gOh"/>
+                </mask>
+            </variation>
+            <variation key="widthClass=compact">
+                <mask key="constraints">
+                    <exclude reference="F1P-bv-9Dw"/>
+                    <include reference="dVM-4B-gOh"/>
+                </mask>
+            </variation>
+            <point key="canvasLocation" x="-1388" y="-439"/>
         </view>
     </objects>
 </document>
