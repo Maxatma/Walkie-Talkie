@@ -151,4 +151,23 @@ extension Router {
             self.push(vc)
         }
     }
+    
+    func showSource(webRTCClient: WebRTCClient) {
+        DispatchQueue.main.async {
+            let vm = SourceVM(webRTCClient: webRTCClient)
+            let vc = SourceVC()
+            vc.viewModel = vm
+            self.push(vc)
+        }
+    }
+    
+    func showContacts() {
+        DispatchQueue.main.async {
+            let vm = ContactsVM()
+            let vc = ContactsVC()
+            vc.viewModel = vm
+            self.push(vc)
+        }
+    }
 }
+

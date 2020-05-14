@@ -42,6 +42,15 @@
 		DD7B68F9245818F400BAB913 /* WebRTCService+RTCDataChannelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7B68F8245818F400BAB913 /* WebRTCService+RTCDataChannelDelegate.swift */; };
 		DD7B68FB2458192000BAB913 /* WebRTCService+RTCPeerConnectionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7B68FA2458192000BAB913 /* WebRTCService+RTCPeerConnectionDelegate.swift */; };
 		DD7B68FD2458194500BAB913 /* AudioClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7B68FC2458194500BAB913 /* AudioClient.swift */; };
+		DD7C9DFC246DAF46002374D9 /* ContactsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7C9DFB246DAF46002374D9 /* ContactsVC.swift */; };
+		DD7C9DFF246DAF60002374D9 /* ContactsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD7C9DFE246DAF60002374D9 /* ContactsVC.xib */; };
+		DD7C9E01246DAF69002374D9 /* ContactsVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7C9E00246DAF69002374D9 /* ContactsVM.swift */; };
+		DD7C9E03246DB0F9002374D9 /* SourceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7C9E02246DB0F9002374D9 /* SourceVC.swift */; };
+		DD7C9E05246DB0FF002374D9 /* SourceVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7C9E04246DB0FF002374D9 /* SourceVM.swift */; };
+		DD7C9E07246DB104002374D9 /* SourceVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD7C9E06246DB104002374D9 /* SourceVC.xib */; };
+		DD7C9E0A246DBC5D002374D9 /* ContactCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD7C9E09246DBC5D002374D9 /* ContactCell.xib */; };
+		DD7C9E0C246DBC67002374D9 /* ContactCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7C9E0B246DBC67002374D9 /* ContactCell.swift */; };
+		DD7C9E0E246DBC6E002374D9 /* ContactCellVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7C9E0D246DBC6E002374D9 /* ContactCellVM.swift */; };
 		DD91AA6A246448BD0031AEE1 /* VideoClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD91AA69246448BD0031AEE1 /* VideoClient.swift */; };
 		DD9DED832465CE720009F598 /* MainToCallAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9DED822465CE720009F598 /* MainToCallAnimator.swift */; };
 		DD9DED882465D42F0009F598 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9DED872465D42F0009F598 /* UIView+Extension.swift */; };
@@ -129,6 +138,15 @@
 		DD7B68F8245818F400BAB913 /* WebRTCService+RTCDataChannelDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WebRTCService+RTCDataChannelDelegate.swift"; sourceTree = "<group>"; };
 		DD7B68FA2458192000BAB913 /* WebRTCService+RTCPeerConnectionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WebRTCService+RTCPeerConnectionDelegate.swift"; sourceTree = "<group>"; };
 		DD7B68FC2458194500BAB913 /* AudioClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioClient.swift; sourceTree = "<group>"; };
+		DD7C9DFB246DAF46002374D9 /* ContactsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsVC.swift; sourceTree = "<group>"; };
+		DD7C9DFE246DAF60002374D9 /* ContactsVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContactsVC.xib; sourceTree = "<group>"; };
+		DD7C9E00246DAF69002374D9 /* ContactsVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsVM.swift; sourceTree = "<group>"; };
+		DD7C9E02246DB0F9002374D9 /* SourceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceVC.swift; sourceTree = "<group>"; };
+		DD7C9E04246DB0FF002374D9 /* SourceVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceVM.swift; sourceTree = "<group>"; };
+		DD7C9E06246DB104002374D9 /* SourceVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SourceVC.xib; sourceTree = "<group>"; };
+		DD7C9E09246DBC5D002374D9 /* ContactCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContactCell.xib; sourceTree = "<group>"; };
+		DD7C9E0B246DBC67002374D9 /* ContactCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactCell.swift; sourceTree = "<group>"; };
+		DD7C9E0D246DBC6E002374D9 /* ContactCellVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactCellVM.swift; sourceTree = "<group>"; };
 		DD91AA69246448BD0031AEE1 /* VideoClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoClient.swift; sourceTree = "<group>"; };
 		DD9DED822465CE720009F598 /* MainToCallAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainToCallAnimator.swift; sourceTree = "<group>"; };
 		DD9DED872465D42F0009F598 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
@@ -330,6 +348,37 @@
 			path = Router;
 			sourceTree = "<group>";
 		};
+		DD7C9DFD246DAF4A002374D9 /* Contacts */ = {
+			isa = PBXGroup;
+			children = (
+				DD7C9E00246DAF69002374D9 /* ContactsVM.swift */,
+				DD7C9DFB246DAF46002374D9 /* ContactsVC.swift */,
+				DD7C9DFE246DAF60002374D9 /* ContactsVC.xib */,
+				DD7C9E0F246DBC76002374D9 /* Cell */,
+			);
+			path = Contacts;
+			sourceTree = "<group>";
+		};
+		DD7C9E08246DB109002374D9 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				DD7C9E04246DB0FF002374D9 /* SourceVM.swift */,
+				DD7C9E02246DB0F9002374D9 /* SourceVC.swift */,
+				DD7C9E06246DB104002374D9 /* SourceVC.xib */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		DD7C9E0F246DBC76002374D9 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				DD7C9E0B246DBC67002374D9 /* ContactCell.swift */,
+				DD7C9E0D246DBC6E002374D9 /* ContactCellVM.swift */,
+				DD7C9E09246DBC5D002374D9 /* ContactCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		DD9DED8D2465E7EF0009F598 /* Animations */ = {
 			isa = PBXGroup;
 			children = (
@@ -412,6 +461,8 @@
 				DD4A3B27245589CE00871A0B /* Call */,
 				DD6F708A2462EE2F00FCBCEA /* Settings */,
 				DD6F70892462EE2600FCBCEA /* JoinView */,
+				DD7C9E08246DB109002374D9 /* Source */,
+				DD7C9DFD246DAF4A002374D9 /* Contacts */,
 				DD3C34A824644D0900C244B4 /* Main */,
 			);
 			path = Modules;
@@ -505,8 +556,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD7C9E0A246DBC5D002374D9 /* ContactCell.xib in Resources */,
 				DD3C34AC24644D1B00C244B4 /* MainVC.xib in Resources */,
 				DD6F70882462EE2200FCBCEA /* JoinView.xib in Resources */,
+				DD7C9E07246DB104002374D9 /* SourceVC.xib in Resources */,
 				DD50EA5B2458082500B83F36 /* cat.mp4 in Resources */,
 				DD1C075424372FBB000C6972 /* LaunchScreen.storyboard in Resources */,
 				DDED86942461B705004A0FA5 /* PIPVideoVC.xib in Resources */,
@@ -514,6 +567,7 @@
 				DD1D1D9E2461CBB600FD122A /* SettingsView.xib in Resources */,
 				DD1C075124372FBB000C6972 /* Assets.xcassets in Resources */,
 				DD3E1083245411F100B900C7 /* CallVC.xib in Resources */,
+				DD7C9DFF246DAF60002374D9 /* ContactsVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -566,11 +620,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD7C9E0C246DBC67002374D9 /* ContactCell.swift in Sources */,
 				DD6F708E246309EF00FCBCEA /* VideoVM.swift in Sources */,
+				DD7C9E03246DB0F9002374D9 /* SourceVC.swift in Sources */,
 				DDA9CE71243A40C9008F5BFE /* UIPageViewController+Bond.swift in Sources */,
 				DDA9CE73243A40C9008F5BFE /* UIDocumentPickerViewController+Bond.swift in Sources */,
+				DD7C9E05246DB0FF002374D9 /* SourceVM.swift in Sources */,
 				DD9DED8F2465F4610009F598 /* CallToMainAnimator.swift in Sources */,
 				DD3E108124540E9300B900C7 /* CallVM.swift in Sources */,
+				DD7C9E01246DAF69002374D9 /* ContactsVM.swift in Sources */,
 				DDA9CE70243A40C9008F5BFE /* UIScrollView+Bond.swift in Sources */,
 				DDA9CE6E243A40C9008F5BFE /* UIApplication+Extension.swift in Sources */,
 				DD3C34A724644D0500C244B4 /* MainVC.swift in Sources */,
@@ -585,6 +643,7 @@
 				DD9DED882465D42F0009F598 /* UIView+Extension.swift in Sources */,
 				DDA9CE7E243A40C9008F5BFE /* UITableView+Bond.swift in Sources */,
 				DD1C074824372FB9000C6972 /* AppDelegate.swift in Sources */,
+				DD7C9DFC246DAF46002374D9 /* ContactsVC.swift in Sources */,
 				DD4A3B3B2455927C00871A0B /* RTCStates.swift in Sources */,
 				DDA9CE80243A40C9008F5BFE /* UIStoryboard+Extensions.swift in Sources */,
 				DDA9CE6F243A40C9008F5BFE /* RegisterNibsExtension.swift in Sources */,
@@ -595,6 +654,7 @@
 				DD4A3B3524558DDA00871A0B /* SignalingClient.swift in Sources */,
 				DDA9CE74243A40C9008F5BFE /* SelectableTableCell.swift in Sources */,
 				DDA9CE82243A437A008F5BFE /* BaseServiceError.swift in Sources */,
+				DD7C9E0E246DBC6E002374D9 /* ContactCellVM.swift in Sources */,
 				DDE36BE9246446EA00498795 /* Encodable+Dictionary.swift in Sources */,
 				DDED86902461B662004A0FA5 /* PIPVideoVC.swift in Sources */,
 				DD57B847245EE9E900B84F8A /* SdpType.swift in Sources */,
@@ -695,6 +755,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -748,6 +809,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;

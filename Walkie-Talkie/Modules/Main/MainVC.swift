@@ -17,6 +17,8 @@ final class MainVC: BondVC {
     
     @IBOutlet var myVideo: WebRTCView!
     @IBOutlet var join: JoinView!
+    @IBOutlet var source: UIButton!
+    @IBOutlet var selectID: UIButton!
     
     override func viewDidLoad() {
         navigationController?.delegate = self
@@ -31,6 +33,8 @@ final class MainVC: BondVC {
         super.advise()
         myVideo.videoView.vm = vm.videoVM
         join.viewModel = vm.joinVM
+        source.reactive.tap.bind(to: vm.selectSource).dispose(in: bag)
+        selectID.reactive.tap.bind(to: vm.selectID).dispose(in: bag)
     }
 }
 

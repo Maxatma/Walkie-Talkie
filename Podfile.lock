@@ -296,7 +296,7 @@ PODS:
   - nanopb/encode (1.30905.0)
   - PIPKit (0.2.0)
   - PromisesObjC (1.2.8)
-  - ReactiveKit (3.9.7)
+  - ReactiveKit (3.17.1)
   - SnapKit (5.0.1)
 
 DEPENDENCIES:
@@ -306,7 +306,7 @@ DEPENDENCIES:
   - IHKeyboardAvoiding
   - IQKeyboardManagerSwift
   - PIPKit
-  - ReactiveKit (= 3.9.7)
+  - ReactiveKit
   - SnapKit
 
 SPEC REPOS:
@@ -359,9 +359,9 @@ SPEC CHECKSUMS:
   nanopb: c43f40fadfe79e8b8db116583945847910cbabc9
   PIPKit: 00fd62aa4967f9cef1eca1a5587d3192c23881e1
   PromisesObjC: c119f3cd559f50b7ae681fa59dc1acd19173b7e6
-  ReactiveKit: 5f4c440715d671901c382ae6b42ed3337ce4699b
+  ReactiveKit: f578a74d3555296ea61fab228f5245a4ed7b4b27
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
 
-PODFILE CHECKSUM: 1d2b6f98b6f902e74ff41d84fe8737db76e82f5b
+PODFILE CHECKSUM: f4f14b6e4cda98aab3da3a8e1e12d5941c6c6518
 
 COCOAPODS: 1.9.1

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -12,6 +12,8 @@
                 <outlet property="IQLayoutGuideConstraint" destination="LMG-FG-514" id="Hhb-fK-sjE"/>
                 <outlet property="join" destination="bcg-LN-osD" id="dNf-Cm-n6l"/>
                 <outlet property="myVideo" destination="0te-hw-OKO" id="vwP-8b-Zyc"/>
+                <outlet property="selectID" destination="yQ3-xy-Exl" id="WBd-dY-Oxp"/>
+                <outlet property="source" destination="VH6-1v-2m7" id="J8h-a2-byg"/>
                 <outlet property="view" destination="iN0-l3-epB" id="SPb-EI-xYB"/>
             </connections>
         </placeholder>
@@ -24,6 +26,29 @@
                     <rect key="frame" x="0.0" y="44" width="414" height="852"/>
                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </view>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="vUo-eG-jGS">
+                    <rect key="frame" x="0.0" y="48" width="414" height="40"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yQ3-xy-Exl">
+                            <rect key="frame" x="0.0" y="0.0" width="205" height="40"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <state key="normal" title="SELECT ID">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VH6-1v-2m7">
+                            <rect key="frame" x="209" y="0.0" width="205" height="40"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <state key="normal" title="SELECT SOURCE">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="OGT-TO-MRd"/>
+                    </constraints>
+                    <viewLayoutGuide key="safeArea" id="aQp-co-eSh"/>
+                </stackView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bcg-LN-osD" customClass="JoinView" customModule="Walkie_Talkie" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="762" width="414" height="100"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -37,7 +62,10 @@
                 <constraint firstItem="0te-hw-OKO" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="002-hu-rcn"/>
                 <constraint firstItem="bcg-LN-osD" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="DNe-67-uMB"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="0te-hw-OKO" secondAttribute="trailing" id="IAn-Iv-YAF"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="vUo-eG-jGS" secondAttribute="trailing" id="LFJ-6n-HaU"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="bcg-LN-osD" secondAttribute="bottom" id="LMG-FG-514"/>
+                <constraint firstItem="vUo-eG-jGS" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="bb4-5r-9JX"/>
+                <constraint firstItem="vUo-eG-jGS" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="4" id="iqP-0K-trj"/>
                 <constraint firstAttribute="bottom" secondItem="0te-hw-OKO" secondAttribute="bottom" id="jlO-lY-TUT"/>
                 <constraint firstItem="bcg-LN-osD" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="kIg-98-Z2m"/>
                 <constraint firstItem="0te-hw-OKO" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="44" id="kdk-K8-wbU"/>

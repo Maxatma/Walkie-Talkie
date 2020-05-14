@@ -95,7 +95,7 @@ extension BondViewProtocol where Self: UIView {
         get {
             return _viewModel
         }
-        set(newViewModel) {
+        mutating set(newViewModel) {
             if _viewModel !== newViewModel {
                 unadvise()
                 _viewModel = newViewModel

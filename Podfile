@@ -5,15 +5,15 @@ platform :ios, '13.2'
 
 def ui
   pod 'PIPKit'
+  pod 'IQKeyboardManagerSwift'
+  pod 'IHKeyboardAvoiding'
+  pod 'SnapKit'
 end
 
 def main
   pod 'GoogleWebRTC'
   pod 'Bond', '6.10.2'
-  pod 'ReactiveKit', '3.9.7'
-  pod 'SnapKit'
-  pod 'IQKeyboardManagerSwift'
-  pod 'IHKeyboardAvoiding'
+  pod 'ReactiveKit'
 end
 
 def firebase
