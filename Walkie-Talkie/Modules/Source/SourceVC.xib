@@ -20,8 +20,8 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="8oP-wK-egd">
-                    <rect key="frame" x="122" y="395" width="170" height="106"/>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="8oP-wK-egd">
+                    <rect key="frame" x="122" y="363" width="170" height="170"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0cw-eQ-mnc">
                             <rect key="frame" x="0.0" y="0.0" width="170" height="30"/>
@@ -30,13 +30,13 @@
                             </state>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wTW-7g-kgt">
-                            <rect key="frame" x="0.0" y="38" width="170" height="30"/>
+                            <rect key="frame" x="0.0" y="70" width="170" height="30"/>
                             <state key="normal" title="STREAM FROM LIBRARY">
                                 <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </state>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1gv-5G-qFS">
-                            <rect key="frame" x="0.0" y="76" width="170" height="30"/>
+                            <rect key="frame" x="0.0" y="140" width="170" height="30"/>
                             <state key="normal" title="CAMERA">
                                 <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </state>
@@ -44,7 +44,7 @@
                     </subviews>
                 </stackView>
             </subviews>
-            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="8oP-wK-egd" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="0Yu-wp-wux"/>
                 <constraint firstItem="8oP-wK-egd" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="N1C-mZ-VRb"/>

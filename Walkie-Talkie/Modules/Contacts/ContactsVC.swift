@@ -20,11 +20,21 @@ final class ContactsVC: BondVC {
         super.viewDidLoad()
         navigationController?.navigationBar.isHidden = true
         advise()
+        configureTable()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.navigationBar.isHidden = false
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.navigationBar.isHidden = true
     }
     
     override func advise() {
         super.advise()
-        configureTable()
     }
     
     private func configureTable() {

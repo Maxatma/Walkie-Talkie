@@ -9,6 +9,7 @@
 import ReactiveKit
 import Bond
 import WebRTC
+import SwiftyUserDefaults
 
 
 final class JoinVM: BondViewModel {
@@ -33,6 +34,9 @@ final class JoinVM: BondViewModel {
         create
             .observeNext { [weak self] in
                 guard let me = self else { return }
+                
+                Defaults[\.roomIds].append(me.roomID.value)
+                
                 Router.shared.showCall(webRTCClient: webRTCClient)
                 print("create ")
                 me.signalingClient.createRoom()

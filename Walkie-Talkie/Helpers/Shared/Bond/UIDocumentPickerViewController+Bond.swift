@@ -9,11 +9,11 @@
 import Bond
 import ReactiveKit
 
-extension ReactiveExtensions where Base: UIDocumentPickerViewController {
-	public var delegate: ProtocolProxy {
-		return base.reactive.protocolProxy(for: UIDocumentPickerDelegate.self, selector: NSSelectorFromString("setDelegate:"))
-	}
-}
+//extension ReactiveExtensions where Base: UIDocumentPickerViewController {
+//	public var delegate: ProtocolProxy {
+//		return base.reactive.protocolProxy(for: UIDocumentPickerDelegate.self, selector: NSSelectorFromString("setDelegate:"))
+//	}
+//}
 
 //extension UIDocumentPickerViewController {
 //    var pickedAtURL: SafeSignal<[URL]> {

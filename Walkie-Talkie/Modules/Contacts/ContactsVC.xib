@@ -9,6 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ContactsVC" customModule="Walkie_Talkie" customModuleProvider="target">
             <connections>
+                <outlet property="table" destination="leZ-SG-gQl" id="eh7-aa-Gpd"/>
                 <outlet property="view" destination="fRV-c5-4ak" id="80P-Um-UBT"/>
             </connections>
         </placeholder>
@@ -16,9 +17,21 @@
         <view contentMode="scaleToFill" id="fRV-c5-4ak">
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="leZ-SG-gQl">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="leZ-SG-gQl" firstAttribute="top" secondItem="xMX-YD-RVW" secondAttribute="top" id="1W1-ss-Oe9"/>
+                <constraint firstItem="leZ-SG-gQl" firstAttribute="leading" secondItem="xMX-YD-RVW" secondAttribute="leading" id="O21-9u-pYR"/>
+                <constraint firstItem="xMX-YD-RVW" firstAttribute="bottom" secondItem="leZ-SG-gQl" secondAttribute="bottom" id="VyB-hQ-x34"/>
+                <constraint firstItem="xMX-YD-RVW" firstAttribute="trailing" secondItem="leZ-SG-gQl" secondAttribute="trailing" id="qMI-bR-Z0r"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="xMX-YD-RVW"/>
-            <point key="canvasLocation" x="132" y="153"/>
+            <point key="canvasLocation" x="-125" y="158"/>
         </view>
     </objects>
 </document>

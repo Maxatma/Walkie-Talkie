@@ -8,6 +8,7 @@
 
 import Bond
 import ReactiveKit
+import SwiftyUserDefaults
 
 
 final class ContactsVM: BondViewModel {
@@ -15,7 +16,14 @@ final class ContactsVM: BondViewModel {
     
     override init() {
         super.init()
-        
+        let ids = Defaults[\.roomIds]
+        items.replace(with: ids.map { СontactCellVM(model: $0)})
     }
+}
+
+
+extension DefaultsKeys {
+    var roomIds: DefaultsKey<[String]> { .init("roomIds", defaultValue: []) }
+    var selesctedId: DefaultsKey<String?> { .init("selesctedId") }
 }
 

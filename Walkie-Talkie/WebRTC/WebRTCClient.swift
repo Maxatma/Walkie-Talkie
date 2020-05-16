@@ -110,10 +110,34 @@ final class WebRTCClient: NSObject {
         peerConnection.add(remoteCandidate)
     }
     
+    var localRenderer: RTCVideoRenderer!
+    
+    func change(localVideoSource: LocalVideoSource) {
+        change(localVideoSource: localVideoSource, renderer: localRenderer)
+    }
+    
+    func change(localVideoSource: LocalVideoSource, renderer: RTCVideoRenderer) {
+        print("change local source")
+        switch localVideoSource {
+        case .camera:
+            startCaptureLocalCameraVideo(renderer: renderer)
+        case let .file(name):
+            startCaptureLocalVideoFile(name: name, renderer: renderer)
+        }
+    }
+    
+    enum LocalVideoSource {
+        case camera
+        case file(name: String)
+    }
+    
     // MARK: - Media
     
     public func startCaptureLocalCameraVideo(renderer: RTCVideoRenderer) {
         print("startCaptureLocalCameraVideo")
+        localRenderer = renderer
+        stopLocalCapture()
+        videoCapturer = RTCCameraVideoCapturer(delegate: videoSource)
         
         guard let capturer = videoCapturer as? RTCCameraVideoCapturer else {
             print("WebRTCService can't get capturer")
@@ -128,23 +152,29 @@ final class WebRTCClient: NSObject {
                 let width2 = CMVideoFormatDescriptionGetDimensions(f2.formatDescription).width
                 return width1 < width2
             }).last,
-            
             // choose highest fps
-            let fps = (format.videoSupportedFrameRateRanges.sorted { return $0.maxFrameRate < $1.maxFrameRate }.last)
+            let frameRateRange = (format.videoSupportedFrameRateRanges.sorted { return $0.maxFrameRate < $1.maxFrameRate }.last)
             else {
                 print("WebRTCService can't get frontCamera")
                 return
         }
         
+        let fps = Int(frameRateRange.maxFrameRate)
+        
         capturer.startCapture(with: frontCamera,
                               format: format,
-                              fps: Int(fps.maxFrameRate))
+                              fps: fps)
         
         localVideoTrack?.add(renderer)
     }
     
     public func startCaptureLocalVideoFile(name: String, renderer: RTCVideoRenderer) {
         print("startCaptureLocalVideoFile")
+        
+        stopLocalCapture()
+        
+        localRenderer = renderer
+        videoCapturer = RTCFileVideoCapturer(delegate: videoSource)
         
         guard let capturer = videoCapturer as? RTCFileVideoCapturer else {
             print("WebRTCService can't get capturer")
@@ -157,6 +187,16 @@ final class WebRTCClient: NSObject {
         }
         
         localVideoTrack?.add(renderer)
+    }
+    
+    private func stopLocalCapture() {
+        if let capt = videoCapturer as? RTCCameraVideoCapturer {
+            capt.stopCapture()
+        }
+        
+        if let capt = videoCapturer as? RTCFileVideoCapturer {
+            capt.stopCapture()
+        }
     }
     
     func renderRemoteVideo(to renderer: RTCVideoRenderer) {
@@ -208,15 +248,9 @@ final class WebRTCClient: NSObject {
         return audioTrack
     }
     
+    private let videoSource = WebRTCClient.factory.videoSource()
+    
     private func createVideoTrack() -> RTCVideoTrack {
-        let videoSource = WebRTCClient.factory.videoSource()
-        
-        //        #if TARGET_OS_SIMULATOR
-        videoCapturer = RTCFileVideoCapturer(delegate: videoSource)
-        //        #else
-        //        self.videoCapturer = RTCCameraVideoCapturer(delegate: videoSource)
-        //        #endif
-        
         let videoTrack = WebRTCClient.factory.videoTrack(with: videoSource, trackId: "video0")
         return videoTrack
     }

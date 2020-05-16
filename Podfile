@@ -14,6 +14,7 @@ def main
   pod 'GoogleWebRTC'
   pod 'Bond', '6.10.2'
   pod 'ReactiveKit'
+  pod 'SwiftyUserDefaults'
 end
 
 def firebase

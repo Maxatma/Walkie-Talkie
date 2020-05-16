@@ -8,6 +8,7 @@
 
 import UIKit
 import IHKeyboardAvoiding
+import SwiftyUserDefaults
 
 
 final class MainVC: BondVC {
@@ -27,6 +28,10 @@ final class MainVC: BondVC {
         hideKeyboardWhenTappedAround()
         advise()
         KeyboardAvoiding.avoidingView = join
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        join.roomID.reactive.text.next(Defaults[\.selesctedId] ?? "")
     }
     
     override func advise() {

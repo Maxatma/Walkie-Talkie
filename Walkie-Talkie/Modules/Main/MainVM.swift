@@ -21,8 +21,8 @@ final class MainVM: BondViewModel {
         super.init()
         webRTCClient = WebRTCClient(iceServers: Config.shared.iceServers)
         joinVM = JoinVM(webRTCClient: webRTCClient)
-        videoVM = VideoVM(webRTCClient: webRTCClient, videoSource: .localFile(name: "cat.mp4"))
-        
+        videoVM = VideoVM(webRTCClient: webRTCClient, videoSource: .localFile(name: "cat.mp4"))        
+            
         selectSource
             .observeNext { [weak self] _ in
                 guard let me = self else { return }

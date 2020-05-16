@@ -8,16 +8,20 @@
 
 import Bond
 import ReactiveKit
+import SwiftyUserDefaults
 
 
 final class СontactCellVM: BondViewModel, SelectableProtocol {
     let doSelect = SafePublishSubject<Void>()
     let info = Observable<String>("")
-
+    
     init(model: String) {
         super.init()
+        info.next(model)
         doSelect
-            .observeNext { Router.shared.pop() }
+            .observeNext {
+                Defaults[\.selesctedId] = model
+                Router.shared.pop() }
             .dispose(in: bag)
     }
 }

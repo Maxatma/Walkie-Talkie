@@ -14,7 +14,24 @@
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="m4T-hE-4BR" id="FIV-GP-aS4">
                 <rect key="frame" x="0.0" y="0.0" width="482" height="154"/>
                 <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sl6-uW-oLZ">
+                        <rect key="frame" x="20" y="11" width="442" height="132"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="sl6-uW-oLZ" firstAttribute="bottom" secondItem="FIV-GP-aS4" secondAttribute="bottomMargin" id="2w9-HI-G7m"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="sl6-uW-oLZ" secondAttribute="trailing" id="HIf-Wc-BZS"/>
+                    <constraint firstItem="sl6-uW-oLZ" firstAttribute="top" secondItem="FIV-GP-aS4" secondAttribute="topMargin" id="RFf-y3-7XX"/>
+                    <constraint firstItem="sl6-uW-oLZ" firstAttribute="leading" secondItem="FIV-GP-aS4" secondAttribute="leadingMargin" id="szo-5G-fK4"/>
+                </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="info" destination="sl6-uW-oLZ" id="PzL-EA-nhC"/>
+            </connections>
             <point key="canvasLocation" x="176.81159420289856" y="102.45535714285714"/>
         </tableViewCell>
     </objects>

@@ -39,6 +39,7 @@
 		DD6F70882462EE2200FCBCEA /* JoinView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD6F70872462EE2200FCBCEA /* JoinView.xib */; };
 		DD6F708C2462F5F800FCBCEA /* VideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6F708B2462F5F800FCBCEA /* VideoView.swift */; };
 		DD6F708E246309EF00FCBCEA /* VideoVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6F708D246309EF00FCBCEA /* VideoVM.swift */; };
+		DD737776246F06F20084CF86 /* UIImagePickerController+Bond.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD737775246F06F20084CF86 /* UIImagePickerController+Bond.swift */; };
 		DD7B68F9245818F400BAB913 /* WebRTCService+RTCDataChannelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7B68F8245818F400BAB913 /* WebRTCService+RTCDataChannelDelegate.swift */; };
 		DD7B68FB2458192000BAB913 /* WebRTCService+RTCPeerConnectionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7B68FA2458192000BAB913 /* WebRTCService+RTCPeerConnectionDelegate.swift */; };
 		DD7B68FD2458194500BAB913 /* AudioClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7B68FC2458194500BAB913 /* AudioClient.swift */; };
@@ -48,7 +49,7 @@
 		DD7C9E03246DB0F9002374D9 /* SourceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7C9E02246DB0F9002374D9 /* SourceVC.swift */; };
 		DD7C9E05246DB0FF002374D9 /* SourceVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7C9E04246DB0FF002374D9 /* SourceVM.swift */; };
 		DD7C9E07246DB104002374D9 /* SourceVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD7C9E06246DB104002374D9 /* SourceVC.xib */; };
-		DD7C9E0A246DBC5D002374D9 /* ContactCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD7C9E09246DBC5D002374D9 /* ContactCell.xib */; };
+		DD7C9E0A246DBC5D002374D9 /* СontactCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD7C9E09246DBC5D002374D9 /* СontactCell.xib */; };
 		DD7C9E0C246DBC67002374D9 /* ContactCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7C9E0B246DBC67002374D9 /* ContactCell.swift */; };
 		DD7C9E0E246DBC6E002374D9 /* ContactCellVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7C9E0D246DBC6E002374D9 /* ContactCellVM.swift */; };
 		DD91AA6A246448BD0031AEE1 /* VideoClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD91AA69246448BD0031AEE1 /* VideoClient.swift */; };
@@ -135,6 +136,7 @@
 		DD6F70872462EE2200FCBCEA /* JoinView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JoinView.xib; sourceTree = "<group>"; };
 		DD6F708B2462F5F800FCBCEA /* VideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoView.swift; sourceTree = "<group>"; };
 		DD6F708D246309EF00FCBCEA /* VideoVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoVM.swift; sourceTree = "<group>"; };
+		DD737775246F06F20084CF86 /* UIImagePickerController+Bond.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImagePickerController+Bond.swift"; sourceTree = "<group>"; };
 		DD7B68F8245818F400BAB913 /* WebRTCService+RTCDataChannelDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WebRTCService+RTCDataChannelDelegate.swift"; sourceTree = "<group>"; };
 		DD7B68FA2458192000BAB913 /* WebRTCService+RTCPeerConnectionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WebRTCService+RTCPeerConnectionDelegate.swift"; sourceTree = "<group>"; };
 		DD7B68FC2458194500BAB913 /* AudioClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioClient.swift; sourceTree = "<group>"; };
@@ -144,7 +146,7 @@
 		DD7C9E02246DB0F9002374D9 /* SourceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceVC.swift; sourceTree = "<group>"; };
 		DD7C9E04246DB0FF002374D9 /* SourceVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceVM.swift; sourceTree = "<group>"; };
 		DD7C9E06246DB104002374D9 /* SourceVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SourceVC.xib; sourceTree = "<group>"; };
-		DD7C9E09246DBC5D002374D9 /* ContactCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContactCell.xib; sourceTree = "<group>"; };
+		DD7C9E09246DBC5D002374D9 /* СontactCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = "СontactCell.xib"; sourceTree = "<group>"; };
 		DD7C9E0B246DBC67002374D9 /* ContactCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactCell.swift; sourceTree = "<group>"; };
 		DD7C9E0D246DBC6E002374D9 /* ContactCellVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactCellVM.swift; sourceTree = "<group>"; };
 		DD91AA69246448BD0031AEE1 /* VideoClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoClient.swift; sourceTree = "<group>"; };
@@ -374,7 +376,7 @@
 			children = (
 				DD7C9E0B246DBC67002374D9 /* ContactCell.swift */,
 				DD7C9E0D246DBC6E002374D9 /* ContactCellVM.swift */,
-				DD7C9E09246DBC5D002374D9 /* ContactCell.xib */,
+				DD7C9E09246DBC5D002374D9 /* СontactCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -394,6 +396,7 @@
 		DDA9CE58243A40C8008F5BFE /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				DD737775246F06F20084CF86 /* UIImagePickerController+Bond.swift */,
 				DD3E1084245415A600B900C7 /* UIViewController+HideKeyboard.swift */,
 				DDA9CE59243A40C8008F5BFE /* UIApplication+Extension.swift */,
 				DDA9CE5A243A40C8008F5BFE /* RegisterNibsExtension.swift */,
@@ -556,7 +559,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DD7C9E0A246DBC5D002374D9 /* ContactCell.xib in Resources */,
+				DD7C9E0A246DBC5D002374D9 /* СontactCell.xib in Resources */,
 				DD3C34AC24644D1B00C244B4 /* MainVC.xib in Resources */,
 				DD6F70882462EE2200FCBCEA /* JoinView.xib in Resources */,
 				DD7C9E07246DB104002374D9 /* SourceVC.xib in Resources */,
@@ -646,6 +649,7 @@
 				DD7C9DFC246DAF46002374D9 /* ContactsVC.swift in Sources */,
 				DD4A3B3B2455927C00871A0B /* RTCStates.swift in Sources */,
 				DDA9CE80243A40C9008F5BFE /* UIStoryboard+Extensions.swift in Sources */,
+				DD737776246F06F20084CF86 /* UIImagePickerController+Bond.swift in Sources */,
 				DDA9CE6F243A40C9008F5BFE /* RegisterNibsExtension.swift in Sources */,
 				DD9DED8A2465D9430009F598 /* BaseAnimator.swift in Sources */,
 				DDA9CE7F243A40C9008F5BFE /* UIButton+ThrottledTap.swift in Sources */,
@@ -730,6 +734,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -791,6 +796,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;

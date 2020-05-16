@@ -298,6 +298,7 @@ PODS:
   - PromisesObjC (1.2.8)
   - ReactiveKit (3.17.1)
   - SnapKit (5.0.1)
+  - SwiftyUserDefaults (5.0.0)
 
 DEPENDENCIES:
   - Bond (= 6.10.2)
@@ -308,6 +309,7 @@ DEPENDENCIES:
   - PIPKit
   - ReactiveKit
   - SnapKit
+  - SwiftyUserDefaults
 
 SPEC REPOS:
   trunk:
@@ -335,6 +337,7 @@ SPEC REPOS:
     - PromisesObjC
     - ReactiveKit
     - SnapKit
+    - SwiftyUserDefaults
 
 SPEC CHECKSUMS:
   abseil: 6c8eb7892aefa08d929b39f9bb108e5367e3228f
@@ -361,7 +364,8 @@ SPEC CHECKSUMS:
   PromisesObjC: c119f3cd559f50b7ae681fa59dc1acd19173b7e6
   ReactiveKit: f578a74d3555296ea61fab228f5245a4ed7b4b27
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
+  SwiftyUserDefaults: 33fcb42bd1feb53a37d873feb62c82967db5f7f6
 
-PODFILE CHECKSUM: f4f14b6e4cda98aab3da3a8e1e12d5941c6c6518
+PODFILE CHECKSUM: f999dab304ec87e92b8c73a280f742a21b73a89c
 
 COCOAPODS: 1.9.1

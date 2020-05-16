@@ -8,6 +8,7 @@
 
 import ReactiveKit
 import Bond
+import WebRTC
 
 
 final class SourceVM: BondViewModel {
@@ -15,39 +16,33 @@ final class SourceVM: BondViewModel {
     let library = SafePublishSubject<Void>()
     let selectDefault = SafePublishSubject<Void>()
     var webRTCClient: WebRTCClient!
-    
+    let selectInLibrary = SafePublishSubject<String>()
+
     init(webRTCClient: WebRTCClient) {
         super.init()
         self.webRTCClient = webRTCClient
         
         camera
             .observeNext { _ in
-                //make webrtcclient to work with camera
+                webRTCClient.change(localVideoSource: .camera)
+                Router.shared.pop()
         }
         .dispose(in: bag)
         
-        library
-            .observeNext { [weak self] _ in
-                guard let me = self else { return }
-                me.openVideoGallery()
+        selectInLibrary
+            .observeNext { name in
+                webRTCClient.change(localVideoSource: .file(name: name))
+                Router.shared.pop()
         }
         .dispose(in: bag)
+
         
         selectDefault
             .observeNext { _ in
-                
+                webRTCClient.change(localVideoSource: .file(name: "cat.mp4"))
+                Router.shared.pop()
         }
         .dispose(in: bag)
-    }
-    
-    func openVideoGallery() {
-        let picker = UIImagePickerController()
-        //        picker.delegate = self
-        picker.sourceType = .savedPhotosAlbum
-        picker.mediaTypes = UIImagePickerController.availableMediaTypes(for: .savedPhotosAlbum)!
-        picker.mediaTypes = ["public.movie"]
-        picker.allowsEditing = false
-        Router.shared.present(vc: picker)
     }
 }
 

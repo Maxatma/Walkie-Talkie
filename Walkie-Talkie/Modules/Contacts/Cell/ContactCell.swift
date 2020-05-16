@@ -18,7 +18,7 @@ final class СontactCell: SelectableTableCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        selectionStyle    = .none
+        selectionStyle = .none
     }
     
     override func advise() {
