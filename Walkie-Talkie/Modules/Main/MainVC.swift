@@ -29,9 +29,10 @@ final class MainVC: BondVC {
         advise()
         KeyboardAvoiding.avoidingView = join
     }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        join.roomID.reactive.text.next(Defaults[\.selesctedId] ?? "")
+        vm.joinVM.roomID.next(Defaults[\.selesctedId] ?? "")
     }
     
     override func advise() {

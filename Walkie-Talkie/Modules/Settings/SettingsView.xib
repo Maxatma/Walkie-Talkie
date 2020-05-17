@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -26,14 +26,26 @@
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ah2-OT-hEc" customClass="OnOffButton" customModule="Walkie_Talkie" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="0.0" width="92" height="93"/>
                             <state key="normal" image="micOn"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="image" keyPath="on" value="micOn"/>
+                                <userDefinedRuntimeAttribute type="image" keyPath="off" value="micOff"/>
+                            </userDefinedRuntimeAttributes>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mEV-p3-Iwl" customClass="OnOffButton" customModule="Walkie_Talkie" customModuleProvider="target">
                             <rect key="frame" x="92" y="0.0" width="91.5" height="93"/>
                             <state key="normal" image="soundOn"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="image" keyPath="on" value="soundOn"/>
+                                <userDefinedRuntimeAttribute type="image" keyPath="off" value="soundOff"/>
+                            </userDefinedRuntimeAttributes>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l8h-qQ-VUd" customClass="OnOffButton" customModule="Walkie_Talkie" customModuleProvider="target">
                             <rect key="frame" x="183.5" y="0.0" width="92" height="93"/>
                             <state key="normal" image="cameraOn"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="image" keyPath="on" value="cameraOn"/>
+                                <userDefinedRuntimeAttribute type="image" keyPath="off" value="cameraOff"/>
+                            </userDefinedRuntimeAttributes>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uk5-94-2kL">
                             <rect key="frame" x="275.5" y="0.0" width="91.5" height="93"/>
@@ -57,9 +69,12 @@
         </view>
     </objects>
     <resources>
+        <image name="cameraOff" width="21.333333969116211" height="21.333333969116211"/>
         <image name="cameraOn" width="21.333333969116211" height="21.333333969116211"/>
         <image name="hangup" width="21.333333969116211" height="21.333333969116211"/>
+        <image name="micOff" width="21.333333969116211" height="21.333333969116211"/>
         <image name="micOn" width="21.333333969116211" height="21.333333969116211"/>
+        <image name="soundOff" width="21.333333969116211" height="21.333333969116211"/>
         <image name="soundOn" width="21.333333969116211" height="21.333333969116211"/>
     </resources>
 </document>

@@ -37,7 +37,7 @@ public final class Router: NSObject {
     public func configureAppearance() {
         let navigationBarAppearace          = UINavigationBar.appearance()
         navigationBarAppearace.tintColor    = .white
-        navigationBarAppearace.barTintColor = UIColor(red: 0.149, green: 0.09, blue: 0.345, alpha: 1)
+        navigationBarAppearace.barTintColor = .black
     }
     
     public func makeVisible()  {
@@ -45,9 +45,6 @@ public final class Router: NSObject {
         window!.rootViewController = rootNavigation
         window!.makeKeyAndVisible()
     }
-    
-    //MARK: - Routing
-    
     
     //MARK: - Global
     
@@ -141,6 +138,7 @@ public final class Router: NSObject {
     }
 }
 
+//MARK: - Routing
 
 extension Router {
     func showCall(webRTCClient: WebRTCClient) {

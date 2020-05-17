@@ -25,7 +25,12 @@ final class CallVC: BondVC {
         navigationController?.navigationBar.isHidden = true
         advise()
         PIPKit.show(with: pipVC)
-        hideAllWhenTappedAround()
+        hideViewsWhenTappedAround()
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        PIPKit.dismiss(animated: false)
     }
     
     override func advise() {
@@ -35,15 +40,31 @@ final class CallVC: BondVC {
         pipVC.viewModel = vm.meVideoVM
     }
     
-    private func hideAllWhenTappedAround() {
-        let tap = UITapGestureRecognizer(target: self, action: #selector(Self.dissmissAll))
-        tap.cancelsTouchesInView = false
-        view.addGestureRecognizer(tap)
-    }
-    
-    @objc func dissmissAll() {
+    @objc override func hideViews() {
         settings.alpha = settings.alpha == 0 ? 1 : 0
         pipVC.view.alpha = pipVC.view.alpha == 0 ? 1 : 0
     }
 }
 
+extension UIViewController {
+    
+    func hideViewsWhenTappedAround() {
+        let tap = UITapGestureRecognizer(target: self, action: #selector(Self.hideViews))
+        tap.cancelsTouchesInView = false
+        tap.numberOfTapsRequired = 1
+        tap.delegate = self
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc func hideViews() {
+        
+    }
+}
+
+
+extension UIViewController: UIGestureRecognizerDelegate {
+    public func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldReceive touch: UITouch) -> Bool {
+        let isControllTapped = touch.view is UIControl
+        return !isControllTapped
+    }
+}

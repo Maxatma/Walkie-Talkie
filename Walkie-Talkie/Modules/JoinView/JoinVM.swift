@@ -21,6 +21,7 @@ final class JoinVM: BondViewModel {
     let create = SafePublishSubject<Void>()
     let join = SafePublishSubject<Void>()
     let roomID = Observable<String>("")
+    let isButtonsEnabled = Observable<Bool>(false)
     
     init(webRTCClient: WebRTCClient) {
         super.init()
@@ -28,6 +29,8 @@ final class JoinVM: BondViewModel {
         webRTCClient.delegate = self
         signalingClient = SignalingClient.shared
         
+        roomID.map { $0 != nil && $0!.count > 0 }.bind(to: isButtonsEnabled).dispose(in: bag)
+
         create.map { true }.bind(to: isCreatingRoom).dispose(in: bag)
         join.map { false }.bind(to: isCreatingRoom).dispose(in: bag)
 
@@ -36,7 +39,7 @@ final class JoinVM: BondViewModel {
                 guard let me = self else { return }
                 
                 Defaults[\.roomIds].append(me.roomID.value)
-                
+
                 Router.shared.showCall(webRTCClient: webRTCClient)
                 print("create ")
                 me.signalingClient.createRoom()

@@ -35,10 +35,14 @@ final class OnOffButton: BondButton {
     
     let isOn = Observable<Bool>(true)
     
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        reactive.tap.map { [unowned self] _ in !self.isOn.value }.bind(to: isOn).dispose(in: bag)
+        isOn.map { [unowned self] value in value ? self.on : self.off }.bind(to: reactive.image).dispose(in: bag)
+    }
+    
     override func advise() {
         super.advise()
-        reactive.tap.map { [unowned self] _ in !self.isOn.value }.bind(to: isOn).dispose(in: bag)
-        isOn.map { $0 ? self.on : self.off }.bind(to: reactive.image).dispose(in: bag)
     }
 }
 

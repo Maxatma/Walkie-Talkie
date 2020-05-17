@@ -34,6 +34,7 @@ final class CallToMainAnimator: BaseAnimator<CallVC, MainVC> {
             .add(
                 videoViewSnapshot
         )
+        fromVC.pipVC.view.alpha = 0
         
         let duration = transitionDuration(using: transitionContext)
         
