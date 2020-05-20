@@ -30,7 +30,7 @@ Demo that uses WebRTC for video calls, based on Firebase signaling.
 - Choose previous room IDs you have used
 - Your video goes in picture-in-picture
 - Tap to hide all but caller video
-- Press settings buttons for mico/sound/video on/off
+- Press settings buttons for mic/sound/video on/off
 - Enjoy video call 
 
 
