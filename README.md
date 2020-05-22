@@ -4,8 +4,8 @@ Video Calls Application that implements WebRTC power for video calls.
 
 
 <p align="center">
- <img src="https://user-images.githubusercontent.com/7135226/82156823-ccbb2a80-98a7-11ea-8c33-64f8e2a2ae77.png" width="40%">
  <img src="https://user-images.githubusercontent.com/7135226/82156829-dcd30a00-98a7-11ea-86ae-42db1f4a03ef.png" width="40%">
+ <img src="https://user-images.githubusercontent.com/7135226/82156823-ccbb2a80-98a7-11ea-8c33-64f8e2a2ae77.png" width="40%">
  </p>
  
  
