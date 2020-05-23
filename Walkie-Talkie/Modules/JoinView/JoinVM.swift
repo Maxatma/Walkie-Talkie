@@ -17,7 +17,6 @@ final class JoinVM: BondViewModel {
     var signalingClient: SignalingClient!
     let isCreatingRoom = Observable<Bool>(true)
     let state = Observable<String>("")
-    
     let create = SafePublishSubject<Void>()
     let join = SafePublishSubject<Void>()
     let roomID = Observable<String>("")
@@ -30,18 +29,20 @@ final class JoinVM: BondViewModel {
         signalingClient = SignalingClient.shared
         
         roomID.map { $0 != nil && $0!.count > 0 }.bind(to: isButtonsEnabled).dispose(in: bag)
-
+        
         create.map { true }.bind(to: isCreatingRoom).dispose(in: bag)
         join.map { false }.bind(to: isCreatingRoom).dispose(in: bag)
-
+        
         create
             .observeNext { [weak self] in
                 guard let me = self else { return }
                 
                 Defaults[\.roomIds].append(me.roomID.value)
-
-                Router.shared.showCall(webRTCClient: webRTCClient)
+                let callVM = CallVM(webRTCClient: webRTCClient)
+                Router.shared.showCall(vm: callVM)
+                
                 print("create ")
+                
                 me.signalingClient.createRoom()
                 me.webRTCClient.offer { rtcDescription in
                     print("me.webRTCClient.offer")
@@ -102,7 +103,8 @@ final class JoinVM: BondViewModel {
                                 me.webRTCClient.answer { descr in
                                     print("descr is ", descr)
                                     me.signalingClient.createAnswer(desc: SessionDescription(from: descr), id: me.roomID.value)
-                                    Router.shared.showCall(webRTCClient: webRTCClient)
+                                    let callVM = CallVM(webRTCClient: webRTCClient)
+                                    Router.shared.showCall(vm: callVM)
                                 }
                         }
                         .dispose(in: me.bag)
@@ -127,7 +129,7 @@ extension JoinVM: WebRTCClientDelegate {
     }
     
     func webRTCClient(_ client: WebRTCClient, didChangeConnectionState state: RTCIceConnectionState) {
-        self.state.next(state.description)
+        self.state.send(state.description)
         print("WebRTCClientDelegate didChangeConnectionState ", state)
     }
     

@@ -26,23 +26,23 @@ public final class Router: NSObject {
         let rootVC = MainVC()
         rootVC.viewModel = MainVM()
         rootNavigation = UINavigationController(rootViewController: rootVC)
-        IQKeyboardManager.shared.enable = true
-        IQKeyboardManager.shared.previousNextDisplayMode = .alwaysShow
-        IQKeyboardManager.shared.toolbarManageBehaviour = .byPosition
-        IQKeyboardManager.shared.disabledDistanceHandlingClasses = [MainVC.self, CallVC.self]
-        IQKeyboardManager.shared.toolbarTintColor = .black
-        IQKeyboardManager.shared.shouldShowToolbarPlaceholder = false
     }
     
     public func configureAppearance() {
         let navigationBarAppearace          = UINavigationBar.appearance()
         navigationBarAppearace.tintColor    = .white
         navigationBarAppearace.barTintColor = .black
+        
+        IQKeyboardManager.shared.enable = true
+        IQKeyboardManager.shared.toolbarManageBehaviour = .byPosition
+        IQKeyboardManager.shared.disabledDistanceHandlingClasses = [MainVC.self, CallVC.self]
+        IQKeyboardManager.shared.toolbarTintColor = .black
     }
     
-    public func makeVisible()  {
+    public func makeVisible(windowScene: UIWindowScene)  {
         window = UIWindow()
         window!.rootViewController = rootNavigation
+        window!.windowScene = windowScene
         window!.makeKeyAndVisible()
     }
     
@@ -141,9 +141,8 @@ public final class Router: NSObject {
 //MARK: - Routing
 
 extension Router {
-    func showCall(webRTCClient: WebRTCClient) {
+    func showCall(vm: CallVM) {
         DispatchQueue.main.async {
-            let vm = CallVM(webRTCClient: webRTCClient)
             let vc = CallVC()
             vc.viewModel = vm
             self.push(vc)

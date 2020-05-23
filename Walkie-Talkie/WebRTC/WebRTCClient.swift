@@ -118,6 +118,7 @@ final class WebRTCClient: NSObject {
     
     func change(localVideoSource: LocalVideoSource, renderer: RTCVideoRenderer) {
         print("change local source")
+        self.localVideoSource = localVideoSource
         switch localVideoSource {
         case .camera:
             startCaptureLocalCameraVideo(renderer: renderer)
@@ -125,6 +126,8 @@ final class WebRTCClient: NSObject {
             startCaptureLocalVideoFile(name: name, renderer: renderer)
         }
     }
+    
+    var localVideoSource: LocalVideoSource!
     
     enum LocalVideoSource {
         case camera

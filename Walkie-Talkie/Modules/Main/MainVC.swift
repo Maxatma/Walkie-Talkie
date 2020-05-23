@@ -32,7 +32,7 @@ final class MainVC: BondVC {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        vm.joinVM.roomID.next(Defaults[\.selesctedId] ?? "")
+        vm.joinVM.roomID.send(Defaults[\.selesctedId] ?? "")
     }
     
     override func advise() {

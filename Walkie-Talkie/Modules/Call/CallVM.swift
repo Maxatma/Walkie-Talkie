@@ -21,6 +21,7 @@ final class CallVM: BondViewModel {
         super.init()
         settingsVM = SettingsVM(webRTCClient: webRTCClient)
         videoVM = VideoVM(webRTCClient: webRTCClient, videoSource: .remote)
-        meVideoVM = PIPVideoVM(webRTCClient: webRTCClient, videoSource: .localFile(name: "cat.mp4"))
+        meVideoVM = PIPVideoVM(webRTCClient: webRTCClient, videoSource: VideoSource(localVideoSource: webRTCClient.localVideoSource))
     }
 }
+

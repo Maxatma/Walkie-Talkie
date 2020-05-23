@@ -8,7 +8,6 @@
 
 import Bond
 import SnapKit
-import IQKeyboardManagerSwift
 
 
 class XibLoadedView: UIView {

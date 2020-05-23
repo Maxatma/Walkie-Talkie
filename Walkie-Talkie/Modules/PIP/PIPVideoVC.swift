@@ -32,5 +32,9 @@ final class PIPVideoVC: BondVC, PIPUsable {
     var initialPosition: PIPPosition {
         return .topRight
     }
+    
+    var pipSize: CGSize {
+        return .init(width: 100, height: 100)
+    }
 }
 

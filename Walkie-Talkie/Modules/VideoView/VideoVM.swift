@@ -36,4 +36,18 @@ enum VideoSource {
     case remote
     case localCamera
     case localFile(name: String)
+    
+    init(localVideoSource: WebRTCClient.LocalVideoSource) {
+        switch localVideoSource {
+        case .camera:
+            self = .localCamera
+        case let .file(name):
+            self = .localFile(name: name)
+            
+        default:
+            self = .localCamera
+        }
+        
+    }    
 }
+
