@@ -1,33 +1,40 @@
 # Walkie-Talkie
 
-Video Calls Application using WebRTC and Firebase
+Video Calls Application that implements WebRTC power for video calls. 
 
-Demo that uses WebRTC for video calls, based on Firebase signaling. 
 
 <p align="center">
- <img src="https://user-images.githubusercontent.com/7135226/80953801-6a354980-8e26-11ea-84bf-ace79559d523.png" width="25%">
- <img src="https://user-images.githubusercontent.com/7135226/80954595-e2503f00-8e27-11ea-9d54-2c6700ab30cb.png" width="50%">
+ <img src="https://user-images.githubusercontent.com/7135226/82156829-dcd30a00-98a7-11ea-86ae-42db1f4a03ef.png" width="40%">
+ <img src="https://user-images.githubusercontent.com/7135226/82156823-ccbb2a80-98a7-11ea-8c33-64f8e2a2ae77.png" width="40%">
  </p>
  
  
-**Technologies used:**
+## Technologies used:
 
  - Language: Swift 5
  - Main Architectural pattern: MVVM + Router 
  - Dependency manager: CocoaPods 
- - Signaling and WebRTC: GoogleWebRTC, Firebase/Firestore
+ - Network:
+      WebRTC: GoogleWebRTC
+      Signaling: Firebase/Firestore
  - UI: Xib, Autolayout, UIStackView
- - Reactive Programming: ReactiveKit+Bond
+ - Reactive Programming: ReactiveKit + Bond
  - Object JSON Mapping: Codable
 
 
-Functionality description: 
+## Functionality description:
+
 - Create room by entering ID and pressing "create"
 - Provide you ID to callee and make him enter ID and press "join"
+- Choose source for video stream - camera or default videofile
+- Choose previous room IDs you have used
+- Your video goes in picture-in-picture
+- Tap to hide all but caller video
+- Press settings buttons for mic/sound/video on/off
 - Enjoy video call 
-- P.S. Currently it is mocked by simple cat.mp4 video, because of simulator restrictions. So, change the way you capturing video from local file to camera. 
 
-You can use WebRTCClient and SignalingClient classes to make your own video call project, just create your own Firebase project and put GoogleService-Info.plist file into it.
+
+You can use WebRTCClient and SignalingClient classes to make your own video call project. To do that create Firebase project and put your GoogleService-Info.plist file into it.
 Don't forget to call FirebaseApp.configure() in AppDelegate
 
 
