@@ -40,7 +40,9 @@ Don't forget to call FirebaseApp.configure() in AppDelegate
 ## Other platforms:
 
 Android version https://github.com/paulzin/webrtc-demo
+
 Web Code: https://github.com/webrtc/FirebaseRTC/blob/master/public/app.js
+
 Web sample: https://walkie-talkie-b01d7.web.app
 
 
