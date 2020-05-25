@@ -37,6 +37,12 @@ Video Calls Application that implements WebRTC power for video calls.
 You can use WebRTCClient and SignalingClient classes to make your own video call project. To do that create Firebase project and put your GoogleService-Info.plist file into it.
 Don't forget to call FirebaseApp.configure() in AppDelegate
 
+## Other platforms:
+
+Android version https://github.com/paulzin/webrtc-demo
+Web Code: https://github.com/webrtc/FirebaseRTC/blob/master/public/app.js
+Web sample: https://walkie-talkie-b01d7.web.app
+
 
 ## Contacts
 
